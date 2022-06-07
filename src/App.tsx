@@ -9,6 +9,10 @@ function App() {
 			</section>
 			<section>
 				<p> Środek</p>
+				<p> Środek</p>
+				<p> Środek</p>
+				<p> Środek</p>
+				<p> Środek</p>
 			</section>
 			<section><Footer /> </section>
 		</>
