@@ -1,0 +1,27 @@
+import { Toolbar } from "@mui/material";
+import { CustomLink } from "../CustomLink";
+import { DiscordButton } from "../DiscordButton";
+
+export type NavLinkType = {
+  label: string;
+  href?: string;
+  target?: string;
+};
+
+const sx = { padding: "0 1.5rem", color: "white", lineHeight: "24px" };
+
+export const DesktopNavBar = () => {
+  return (
+    <>
+      <Toolbar sx={{ display: "flex", alignItems: "center" }} component="nav">
+        <CustomLink sx={sx}>About</CustomLink>
+        <CustomLink sx={sx}>Benefits</CustomLink>
+        <CustomLink sx={sx}>Team</CustomLink>
+        <CustomLink sx={sx} href="https://webtrzy.xyz" target="_blank">
+          Webtrzy.xyz
+        </CustomLink>
+        <DiscordButton />
+      </Toolbar>
+    </>
+  );
+};
