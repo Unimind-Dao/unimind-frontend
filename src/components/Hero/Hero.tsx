@@ -1,21 +1,19 @@
-import { Box, Grid, Typography, useTheme, useMediaQuery } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { JoinCommunityButton } from "../JoinCommunityButton";
 import { SocialLinks } from "../SocialLinks";
 
 export const Hero = () => {
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("md"));
-  console.log("theme", theme);
-
-  const px = matches ? "190px" : "100px";
-
   return (
     <Grid
       sx={{
         backgroundColor: "#1b1b1b",
       }}
     >
-      <Box sx={{ flexBasis: "0.5", width: "50%" }} py={0} px={px}>
+      <Box
+        sx={{ flexBasis: "0.5", width: "50%" }}
+        py={0}
+        px={{ xs: "100px", lg: "190px" }}
+      >
         <Typography
           variant="h1"
           color="white"
