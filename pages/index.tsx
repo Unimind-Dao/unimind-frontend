@@ -1,6 +1,6 @@
-import Footer from "./components/footer/Footer";
-import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
+import Footer from "../components/Footer/Footer";
+import { Header } from "../components/Header";
+import { Hero } from "../components/Hero";
 
 function App() {
   return (
