@@ -1,10 +1,12 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
 
-import { Box } from "@mui/system";
+import { Box, BoxProps } from "@mui/material";
 
-export const Content = ({ children }: PropsWithChildren) => {
+export const Content = (props: BoxProps) => {
+  const { children, ...rest } = props;
+
   return (
-    <Box py={0} px={{ xs: 4, lg: "190px" }}>
+    <Box py={0} px={{ xs: 4, lg: "190px" }} {...rest}>
       {children}
     </Box>
   );

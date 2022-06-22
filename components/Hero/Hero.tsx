@@ -1,19 +1,17 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Content } from "../../layout/Content";
 import { JoinCommunityButton } from "../JoinCommunityButton";
 import { SocialLinks } from "../SocialLinks";
 
 export const Hero = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const width = isMobile ? "auto" : "50%";
+
   return (
-    <Grid
-      sx={{
-        backgroundColor: "#1b1b1b",
-      }}
-    >
-      <Box
-        sx={{ flexBasis: "0.5", width: "50%" }}
-        py={0}
-        px={{ xs: "100px", lg: "190px" }}
-      >
+    <Grid sx={{ backgroundColor: "#1b1b1b" }} flexWrap="wrap">
+      <Content sx={{ width }}>
         <Typography
           variant="h1"
           color="white"
@@ -38,7 +36,7 @@ export const Hero = () => {
         </Typography>
         <JoinCommunityButton />
         <SocialLinks pt={7} />
-      </Box>
+      </Content>
     </Grid>
   );
 };

@@ -6,19 +6,13 @@ import { SingleCard } from "./SingleCard";
 
 export const About = () => {
   return (
-    <Grid
-      sx={{
-        backgroundColor: "#1b1b1b",
-        paddingTop: 13,
-        paddingBottom: 13,
-      }}
-    >
+    <Grid pt={13} pb={13} sx={{ backgroundColor: "#1b1b1b" }}>
       <Content>
         <Grid
           container
-          columnSpacing={{ lg: 3 }}
-          rowSpacing={{ xs: 5, lg: 0 }}
-          direction={{ xs: "column", lg: "row" }}
+          columnSpacing={{ md: 3 }}
+          rowSpacing={{ xs: 5, md: 0 }}
+          direction={{ xs: "column", md: "row" }}
         >
           <Grid item xs={4} height="100%">
             <SingleCard title="Are you interested or curious in…">
