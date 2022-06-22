@@ -1,4 +1,7 @@
 import { Box, Grid } from "@mui/material";
+
+import { Content } from "../../layout/Content";
+
 import { SingleCard } from "./SingleCard";
 
 export const About = () => {
@@ -6,10 +9,17 @@ export const About = () => {
     <Grid
       sx={{
         backgroundColor: "#1b1b1b",
+        paddingTop: 13,
+        paddingBottom: 13,
       }}
     >
-      <Box py={0} px={{ xs: "100px", lg: "190px" }}>
-        <Grid container columnSpacing={3}>
+      <Content>
+        <Grid
+          container
+          columnSpacing={{ lg: 3 }}
+          rowSpacing={{ xs: 5, lg: 0 }}
+          direction={{ xs: "column", lg: "row" }}
+        >
           <Grid item xs={4} height="100%">
             <SingleCard title="Are you interested or curious in…">
               Cryptocurrencies, NFT, Metaverse, DAO, E-commerce, Real estate? If
@@ -34,7 +44,7 @@ export const About = () => {
             </SingleCard>
           </Grid>
         </Grid>
-      </Box>
+      </Content>
     </Grid>
   );
 };
