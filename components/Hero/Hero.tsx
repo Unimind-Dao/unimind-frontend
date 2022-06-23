@@ -1,11 +1,11 @@
-import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
+import { useBreakpoints } from "../../hooks/useBreakpoints";
 import { Content } from "../../layout/Content";
 import { JoinCommunityButton } from "../JoinCommunityButton";
 import { SocialLinks } from "../SocialLinks";
 
 export const Hero = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const { isMobile } = useBreakpoints();
 
   const width = isMobile ? "auto" : "50%";
 
