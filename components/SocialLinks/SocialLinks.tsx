@@ -1,6 +1,7 @@
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Grid, GridProps } from "@mui/material";
+import DiscordIcon from "../svg/Discord";
 
 export const SocialLinks = (props: GridProps) => {
   return (
@@ -9,9 +10,11 @@ export const SocialLinks = (props: GridProps) => {
         <TwitterIcon sx={{ color: "white" }} />
       </Grid>
       <Grid item>
+        <DiscordIcon />
+      </Grid>
+      <Grid item>
         <YouTubeIcon sx={{ color: "white" }} />
       </Grid>
-      <Grid item>Discord</Grid>
     </Grid>
   );
 };

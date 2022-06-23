@@ -3,6 +3,7 @@ import { useBreakpoints } from "../../hooks/useBreakpoints";
 import { Content } from "../../layout/Content";
 import { JoinCommunityButton } from "../JoinCommunityButton";
 import { SocialLinks } from "../SocialLinks";
+import DiscordIcon from "../svg/Discord";
 
 export const Hero = () => {
   const { isMobile } = useBreakpoints();
