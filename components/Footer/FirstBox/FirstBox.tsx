@@ -1,6 +1,4 @@
-
 import Box from '@mui/system/Box';
-import { SocialLinks } from '../../SocialLinks/SocialLinks';
 import LogoBox from './LogoBox/LogoBox';
 import SocialBox from './SocialBox/SocialBox';
 

@@ -1,12 +1,4 @@
-import { Twitter } from '@mui/icons-material';
-import { Box, Button, Link } from '@mui/material';
-
-
-
-interface IPartnersBox {
-	name: string,
-	link: string;
-}
+import { Box, Link } from '@mui/material';
 
 export default function PartnersBox() {
 
