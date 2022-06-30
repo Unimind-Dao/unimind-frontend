@@ -2,6 +2,7 @@ import { About } from "../components/About";
 import Footer from "../components/Footer/Footer";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
+import { OurMission } from "../components/OurMission/OurMission";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <About />
       </section>
       <section>
-        <p> Środek</p>
+        <OurMission />
       </section>
       <section>
         <Footer />
