@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from "react";
 
 import { Paper, Typography } from "@mui/material";
 import { useBreakpoints } from "../../hooks/useBreakpoints";

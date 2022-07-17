@@ -1,19 +1,18 @@
 import { Button, styled } from "@mui/material";
 
 export const StyledJoinCommunityButton = styled(Button)`
-  background: #11d2ac;
-  border: 1px solid #11d2ac;
+  background: ${({ theme }) => theme.palette.primary.main};
+  border: 1px solid ${({ theme }) => theme.palette.primary.main};
   border-radius: 4px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 16px 30px;
-  color: black;
+  color: ${({ theme }) => theme.palette.common.black};
   font-weight: bold;
 
   &:hover {
-    color: #11d2ac;
-    border: 1px solid #11d2ac;
+    color: ${({ theme }) => theme.palette.primary.main};
   }
 `;
