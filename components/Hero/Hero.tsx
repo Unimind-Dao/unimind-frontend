@@ -1,24 +1,26 @@
-import { Grid, Typography } from "@mui/material";
+import React from "react";
+
+import { Grid, Typography, useTheme } from "@mui/material";
 import { useBreakpoints } from "../../hooks/useBreakpoints";
 import { Content } from "../../layout/Content";
 import { JoinCommunityButton } from "../JoinCommunityButton";
 import { SocialLinks } from "../SocialLinks";
-import DiscordIcon from "../svg/Discord";
 
 export const Hero = () => {
   const { isMobile } = useBreakpoints();
+  const theme = useTheme();
 
   const width = isMobile ? "auto" : "50%";
 
   return (
-    <Grid sx={{ backgroundColor: "#1b1b1b" }} flexWrap="wrap">
+    <Grid sx={{ backgroundColor: theme.palette.common.black }} flexWrap="wrap">
       <Content sx={{ width }}>
         <Typography
           variant="h1"
-          color="white"
+          color={theme.palette.common.white}
           fontSize="38px"
           fontWeight="bold"
-          lineHeight="48px"
+          lineHeight={1.25}
           pb={3}
           pt={12}
         >
@@ -26,7 +28,7 @@ export const Hero = () => {
         </Typography>
         <Typography
           variant="h2"
-          color="white"
+          color={theme.palette.common.white}
           fontSize="20px"
           lineHeight={1.5}
           pb={6}
