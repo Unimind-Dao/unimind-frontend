@@ -1,16 +1,18 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import { Grid, useTheme } from "@mui/material";
 
 import { Content } from "../../layout/Content";
 
 import { SingleCard } from "./SingleCard";
 
 export const About = () => {
+  const theme = useTheme();
+
   return (
     <Content
       pt={13}
       pb={{ xs: 13, md: 16 }}
-      sx={{ backgroundColor: "#1b1b1b" }}
+      sx={{ backgroundColor: theme.palette.common.black }}
     >
       <Grid>
         <Grid
