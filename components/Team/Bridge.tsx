@@ -1,15 +1,21 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material';
+import React from 'react';
 
-
-export default function Bridge () {
-
-    return (
-			<>
-				<Typography sx={{width:'50%'}}mt={5} variant='body1' textAlign={{ md: 'center' }}>
+export default function Bridge() {
+	return (
+		<>
+			<Box sx={{ marginTop: '10px', marginBottom: '30px' ,width: '50%'}}>
+				<Typography
+					sx={{ width: '100%' }}
+					mt={5}
+					variant='body1'
+					textAlign={{ md: 'center' }}
+				>
 					Meet the people behind UNIMIND. We're still growing and we're always
 					looking for passionate people who want to build decentralized
 					communities. Connect with us!
 				</Typography>
-			</>
-		);
+			</Box>
+		</>
+	);
 }
