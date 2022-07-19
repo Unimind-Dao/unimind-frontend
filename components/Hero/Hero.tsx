@@ -17,7 +17,7 @@ export const Hero = () => {
       <Content sx={{ width }}>
         <Typography
           variant="h1"
-          color={theme.palette.common.white}
+          color={theme.palette.secondary.main}
           fontSize="38px"
           fontWeight="bold"
           lineHeight={1.25}
@@ -28,7 +28,7 @@ export const Hero = () => {
         </Typography>
         <Typography
           variant="h2"
-          color={theme.palette.common.white}
+          color={theme.palette.secondary.main}
           fontSize="20px"
           lineHeight={1.5}
           pb={6}
@@ -38,7 +38,7 @@ export const Hero = () => {
           deep into the web 3.0 world.
         </Typography>
         <JoinCommunityButton />
-        <SocialLinks pt={7} />
+        <SocialLinks pt={7} justifyContent={{ xs: "center", sm: "start" }} />
       </Content>
     </Grid>
   );

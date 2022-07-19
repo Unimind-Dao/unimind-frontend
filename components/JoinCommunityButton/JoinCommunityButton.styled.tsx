@@ -11,6 +11,11 @@ export const StyledJoinCommunityButton = styled(Button)`
   padding: 16px 30px;
   color: ${({ theme }) => theme.palette.common.black};
   font-weight: bold;
+  flex: 1 1 100%;
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    width: 100%;
+  }
 
   &:hover {
     color: ${({ theme }) => theme.palette.primary.main};

@@ -20,7 +20,7 @@ export const SingleCard = ({
         {title}
       </Typography>
       <Typography
-        color={theme.palette.common.white}
+        color={theme.palette.secondary.main}
         fontSize={15}
         lineHeight="130%"
       >
