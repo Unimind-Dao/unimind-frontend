@@ -1,8 +1,8 @@
-import { Paper, styled } from "@mui/material";
+import { Card, Paper, styled } from "@mui/material";
 
-export const StyledSingleCard = styled(Paper)`
+export const StyledSingleCard = styled(Card)`
   background-color: ${({ theme }) => theme.palette.common.black};
-  padding: 3.5rem 1.5rem 0;
+  padding: 3.5rem 1.5rem;
   background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.05),
@@ -14,7 +14,8 @@ export const StyledSingleCard = styled(Paper)`
       rgba(255, 255, 255, 0) 100%
     );
   border-radius: 10px;
-  height: 100%;
-  padding-bottom: ${({ theme }) =>
-    theme.breakpoints.down("md") ? "3.5rem" : ""};
+  /* height: 100%; */
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    /* padding-bottom: 0; */
+  }
 `;
