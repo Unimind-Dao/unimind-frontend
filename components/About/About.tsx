@@ -5,6 +5,24 @@ import { Content } from "../../layout/Content";
 
 import { SingleCard } from "./SingleCard";
 
+const CARDS_TITLES = {
+  FIRST: (
+    <>
+      Are you interested <br /> or curious in…
+    </>
+  ),
+  SECOND: (
+    <>
+      Do you want to gain <br /> new competences in...
+    </>
+  ),
+  THIRD: (
+    <>
+      Are you looking <br /> for opportunities..
+    </>
+  ),
+};
+
 export const About = () => {
   const theme = useTheme();
 
@@ -22,7 +40,7 @@ export const About = () => {
           direction={{ xs: "column", md: "row" }}
         >
           <Grid item xs={4}>
-            <SingleCard title="Are you interested or curious in…">
+            <SingleCard title={CARDS_TITLES.FIRST}>
               Cryptocurrencies, NFT, Metaverse, DAO, E-commerce, Real estate? If
               you are looking for a space where you can find all the information
               in one place and additionally want to exchange knowledge, you've
@@ -30,7 +48,7 @@ export const About = () => {
             </SingleCard>
           </Grid>
           <Grid item xs={4}>
-            <SingleCard title="Do you want to gain new competences in...">
+            <SingleCard title={CARDS_TITLES.SECOND}>
               Programming, trading, analysis & research, education, law, UX/UI
               design, marketing or community building? By joining a guild you
               will be able to raise your skills to the next level and share your
@@ -38,7 +56,7 @@ export const About = () => {
             </SingleCard>
           </Grid>
           <Grid item xs={4}>
-            <SingleCard title=" Are you looking for opportunities..">
+            <SingleCard title={CARDS_TITLES.THIRD}>
               Would you like to find a co-founder, talent to join your team, or
               maybe be up to date with key news and information about
               interesting events? The UNIMIND community is your best choice.

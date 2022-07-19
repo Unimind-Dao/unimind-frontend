@@ -17,5 +17,4 @@ export const StyledSingleCard = styled(Paper)`
   height: 100%;
   padding-bottom: ${({ theme }) =>
     theme.breakpoints.down("md") ? "3.5rem" : ""};
-  /* padding-bottom: isMobile ? "3.5rem" : "", */
 `;

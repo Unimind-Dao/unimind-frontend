@@ -6,7 +6,7 @@ import { StyledSingleCard } from "./SingleCard.styled";
 export const SingleCard = ({
   title = "",
   children = "",
-}: PropsWithChildren<{ title: string }>) => {
+}: PropsWithChildren<{ title: React.ReactNode }>) => {
   const theme = useTheme();
 
   return (
@@ -16,6 +16,7 @@ export const SingleCard = ({
         fontSize={18}
         lineHeight="130%"
         pb={3}
+        fontWeight="bold"
       >
         {title}
       </Typography>
