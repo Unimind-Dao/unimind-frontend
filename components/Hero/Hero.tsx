@@ -27,7 +27,6 @@ export const Hero = () => {
           Be where the change happens with UNIMIND.DAO
         </Typography>
         <Typography
-          variant="h2"
           color={theme.palette.secondary.main}
           fontSize="20px"
           lineHeight={1.5}
