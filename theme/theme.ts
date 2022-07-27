@@ -11,6 +11,7 @@ const theme = createTheme({
     fontFamily: ["Poppins"].join(""),
     h1: { fontFamily: "SpaceGrotesk" },
     h2: { fontFamily: "SpaceGrotesk" },
+    h3: { fontSize: "18px", lineHeight: "150%", fontWeight: "600" },
   },
 });
 
