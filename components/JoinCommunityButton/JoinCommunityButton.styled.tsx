@@ -1,4 +1,5 @@
 import { Button, styled } from "@mui/material";
+import { CustomLink } from "../CustomLink";
 
 export const StyledJoinCommunityButton = styled(Button)`
   background: ${({ theme }) => theme.palette.primary.main};
@@ -19,5 +20,13 @@ export const StyledJoinCommunityButton = styled(Button)`
 
   &:hover {
     color: ${({ theme }) => theme.palette.primary.main};
+  }
+`;
+
+export const StyledCustomLink = styled(CustomLink)`
+  width: 205px;
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    width: 100%;
   }
 `;
