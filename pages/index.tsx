@@ -10,6 +10,7 @@ import { OurMission } from "../components/OurMission/OurMission";
 import Team from "../components/Team/Team";
 import theme from "../theme/theme";
 import { WhatDrivesUs } from "../components/WhatDrivesUs/WhatDrivesUs";
+import JoinUnimindSection from "../components/JoinUnimindSection/JoinUnimindSection";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
       </section>
       <section>
         <WhatDrivesUs />
+      </section>
+      <section>
+        <JoinUnimindSection />
       </section>
       <section>
         <Team />

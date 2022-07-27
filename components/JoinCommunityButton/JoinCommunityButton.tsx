@@ -1,15 +1,27 @@
 import React from "react";
 
-import { CustomLink } from "../CustomLink";
 import {
   StyledCustomLink,
-  StyledJoinCommunityButton,
+  StyledLightJoinCommunityButton,
+  StyledDarkJoinCommunityButton,
 } from "./JoinCommunityButton.styled";
 
-export const JoinCommunityButton = () => {
+type JoinCommunityButtonType = {
+  variant?: "light" | "dark";
+};
+
+const text = "Join Community";
+
+export const JoinCommunityButton = ({
+  variant = "light",
+}: JoinCommunityButtonType) => {
   return (
     <StyledCustomLink href="https://discord.gg/uKS4vjG8" target="_blank">
-      <StyledJoinCommunityButton>Join Community</StyledJoinCommunityButton>
+      {variant === "light" ? (
+        <StyledLightJoinCommunityButton>{text}</StyledLightJoinCommunityButton>
+      ) : (
+        <StyledDarkJoinCommunityButton>{text}</StyledDarkJoinCommunityButton>
+      )}
     </StyledCustomLink>
   );
 };
