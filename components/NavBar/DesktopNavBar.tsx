@@ -1,6 +1,6 @@
 import { Toolbar } from "@mui/material";
 import { CustomLink } from "../CustomLink";
-import { DiscordButton } from "../DiscordButton";
+import ConnectWallet from "../Wallet/Connect";
 
 export type NavLinkType = {
   label: string;
@@ -20,7 +20,7 @@ export const DesktopNavBar = () => {
         <CustomLink sx={sx} href="https://webtrzy.xyz" target="_blank">
           Webtrzy.xyz
         </CustomLink>
-        <DiscordButton />
+        <ConnectWallet />
       </Toolbar>
     </>
   );

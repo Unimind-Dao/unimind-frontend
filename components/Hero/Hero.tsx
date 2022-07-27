@@ -1,9 +1,8 @@
 import { Grid, Typography } from "@mui/material";
-import { useBreakpoints } from "../../hooks/useBreakpoints";
-import { Content } from "../../layout/Content";
+import { useBreakpoints } from "../../hooks";
+import { Content } from "../../layout";
 import { JoinCommunityButton } from "../JoinCommunityButton";
 import { SocialLinks } from "../SocialLinks";
-import DiscordIcon from "../svg/Discord";
 
 export const Hero = () => {
   const { isMobile } = useBreakpoints();
@@ -37,6 +36,7 @@ export const Hero = () => {
         </Typography>
         <JoinCommunityButton />
         <SocialLinks pt={7} />
+
       </Content>
     </Grid>
   );
