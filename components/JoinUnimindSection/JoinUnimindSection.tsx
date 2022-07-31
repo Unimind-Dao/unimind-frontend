@@ -5,7 +5,7 @@ import { Grid, Typography, useTheme } from "@mui/material";
 import { Content } from "../../layout/Content";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
-import { JoinCommunityButton } from "../JoinCommunityButton/JoinCommunityButton";
+import { Button } from "../Button/Button";
 
 const JoinUnimindSection = () => {
   const theme = useTheme();
@@ -27,7 +27,7 @@ const JoinUnimindSection = () => {
             possibilities.
           </Typography>
         </Grid>
-        <JoinCommunityButton variant="dark" />
+        <Button variant="dark">Join Community</Button>
       </Grid>
     </Content>
   );

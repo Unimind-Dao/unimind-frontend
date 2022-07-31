@@ -13,7 +13,7 @@ const commonButtonStyles = css`
   flex: 1 1 100%;
 `;
 
-export const StyledLightJoinCommunityButton = styled(Button)`
+export const StyledLightButton = styled(Button)`
   ${commonButtonStyles};
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -29,7 +29,7 @@ export const StyledLightJoinCommunityButton = styled(Button)`
   }
 `;
 
-export const StyledDarkJoinCommunityButton = styled(Button)`
+export const StyledDarkButton = styled(Button)`
   ${commonButtonStyles};
 
   ${({ theme }) => theme.breakpoints.down("sm")} {

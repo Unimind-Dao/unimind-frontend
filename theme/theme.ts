@@ -6,7 +6,6 @@ const COLORS = {
   black: "#1b1b1b",
 };
 
-// A custom theme for this app
 const theme = createTheme({
   palette: {
     primary: { main: COLORS.primary, contrastText: COLORS.black },

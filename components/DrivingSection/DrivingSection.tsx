@@ -14,7 +14,7 @@ const iconMapper = {
   layers: <LayersIcon />,
 };
 
-type DrivingSectionType = PropsWithChildren<{
+export type DrivingSectionType = PropsWithChildren<{
   title: string;
   icon: keyof typeof iconMapper;
 }>;
@@ -28,7 +28,6 @@ export const DrivingSection = ({
 
   return (
     <Grid container direction="column">
-      {/* Icon */}
       <StyledIconContainer>{iconMapper[icon]}</StyledIconContainer>
       <Typography variant="h3" color={theme.palette.common.white} pb={1} pt={3}>
         {title}
