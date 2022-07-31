@@ -1,9 +1,18 @@
-import styles from './Footer.module.css';
+import { Box} from '@mui/system';
 
 export default function Footer() {
+	const sx = {
+		width: '100%',
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
+		color: 'grey',
+	};
+
 	return (
-		<div className={styles.endBox}>
+		<Box sx={sx}>
 			<p>2022 unimind.dao</p>
-		</div>
+		</Box>
 	);
 }

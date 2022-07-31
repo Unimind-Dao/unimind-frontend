@@ -1,18 +1,19 @@
-import styles from './Footer.module.css';
+import { Box} from '@mui/material';
+import ContactBox from './ContactBox';
 
- export default function PartnersBox () {
+export default function PartnersBox() {
+	const sx = {
+		width: '100%',
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
+		color: 'grey',
+	};
 
-    return (
-			<div className={styles.partnersMainBox}>
-				<div className={styles.partnersBox}>
-					<a>Contact</a>
-				</div>
-				<div className={styles.partnersBox}>
-					<a>Webtrzy.xyz</a>
-				</div>
-				<div className={styles.partnersBox}>
-					<a>NFTPolska</a>
-				</div>
-			</div>
-		);
- }
+	return (
+		<Box sx={sx}>
+			<ContactBox />
+		</Box>
+	);
+}
