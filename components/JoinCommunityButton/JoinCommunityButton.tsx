@@ -1,3 +1,5 @@
+import React from "react";
+
 import { CustomLink } from "../CustomLink";
 import { StyledJoinCommunityButton } from "./JoinCommunityButton.styled";
 

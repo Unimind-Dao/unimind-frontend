@@ -1,4 +1,7 @@
+import React from "react";
+
 import { Toolbar } from "@mui/material";
+
 import { CustomLink } from "../CustomLink";
 import { DiscordButton } from "../DiscordButton";
 
