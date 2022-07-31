@@ -1,11 +1,16 @@
 import { createTheme } from "@mui/material";
 
-// A custom theme for this app
+const COLORS = {
+  primary: "#11d2ac",
+  white: "#ffffff",
+  black: "#1b1b1b",
+};
+
 const theme = createTheme({
   palette: {
-    primary: { main: "#11d2ac" },
-    secondary: { main: "#fff" },
-    common: { black: "#1b1b1b", white: "#fff" },
+    primary: { main: COLORS.primary, contrastText: COLORS.black },
+    secondary: { main: COLORS.white },
+    common: { black: COLORS.black, white: COLORS.white },
   },
   typography: {
     fontFamily: ["Poppins"].join(""),

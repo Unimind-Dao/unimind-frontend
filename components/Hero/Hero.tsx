@@ -3,7 +3,7 @@ import React from "react";
 import { Grid, Typography, useTheme } from "@mui/material";
 import { useBreakpoints } from "../../hooks/useBreakpoints";
 import { Content } from "../../layout/Content";
-import { JoinCommunityButton } from "../JoinCommunityButton";
+import { Button } from "../Button";
 import { SocialLinks } from "../SocialLinks";
 
 export const Hero = () => {
@@ -36,7 +36,7 @@ export const Hero = () => {
           The place where you will gain knowledge, build your network and go
           deep into the web 3.0 world.
         </Typography>
-        <JoinCommunityButton />
+        <Button>Join Community</Button>
         <SocialLinks pt={7} justifyContent={{ xs: "center", sm: "start" }} />
       </Content>
     </Grid>

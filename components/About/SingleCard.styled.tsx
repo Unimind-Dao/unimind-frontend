@@ -1,4 +1,4 @@
-import { Card, Paper, styled } from "@mui/material";
+import { Card, styled } from "@mui/material";
 
 export const StyledSingleCard = styled(Card)`
   background-color: ${({ theme }) => theme.palette.common.black};
@@ -14,8 +14,6 @@ export const StyledSingleCard = styled(Card)`
       rgba(255, 255, 255, 0) 100%
     );
   border-radius: 10px;
-  /* height: 100%; */
   ${({ theme }) => theme.breakpoints.up("md")} {
-    /* padding-bottom: 0; */
   }
 `;
