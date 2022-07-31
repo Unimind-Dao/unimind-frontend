@@ -9,6 +9,7 @@ import { Hero } from "../components/Hero";
 import { OurMission } from "../components/OurMission/OurMission";
 import Team from "../components/Team/Team";
 import theme from "../theme/theme";
+import { WhatDrivesUs } from "../components/WhatDrivesUs/WhatDrivesUs";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
       </section>
       <section>
         <OurMission />
+      </section>
+      <section>
+        <WhatDrivesUs />
       </section>
       <section>
         <Team />
