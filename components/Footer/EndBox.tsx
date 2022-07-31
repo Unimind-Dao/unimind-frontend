@@ -8,7 +8,7 @@ export default function Footer() {
 		flexDirection: 'row',
 		justifyContent: 'center',
 		alignItems: 'center',
-		color: 'white',
+		color: 'rgba(255, 255, 255, 1)',
 	};
 
 	return (

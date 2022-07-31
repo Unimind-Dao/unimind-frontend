@@ -13,7 +13,7 @@ export default function Team () {
     return (
 			<>
             <Box sx={sx}>
-				<SectionTitle sx={{marginTop: '50px'}}mb={2}> Let's meet us</SectionTitle>
+				<SectionTitle sx={{marginTop: '40px'}}mb={2}> Let's meet us</SectionTitle>
                 <LinearGradient shade={'light'}/>
                 <Bridge />
                 <TeamCards  />
