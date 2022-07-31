@@ -1,8 +1,8 @@
 import { Button, styled } from "@mui/material";
 
 export const StyledButton = styled(Button)`
-  color: #11d2ac;
-  border: 1px solid #11d2ac;
+  color: ${({ theme }) => theme.palette.primary.main};
+  border: 1px solid ${({ theme }) => theme.palette.primary.main};
   border-radius: 4px;
   font-size: 1rem;
   padding: 0.5rem 2rem;
@@ -10,7 +10,7 @@ export const StyledButton = styled(Button)`
   line-height: 24px;
 
   &:hover {
-    color: black;
-    background: #11d2ac;
+    color: ${({ theme }) => theme.palette.common.black};
+    background: ${({ theme }) => theme.palette.primary.main};
   }
 `;

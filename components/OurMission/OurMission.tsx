@@ -1,18 +1,27 @@
-import { Grid, Typography } from "@mui/material";
 import React from "react";
+
+import { Grid, Typography, useTheme } from "@mui/material";
+
 import { Content } from "../../layout/Content";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
 
 export const OurMission = () => {
+  const theme = useTheme();
+
   return (
     <Content
       pt={12}
       pb={{ xs: 11, md: 16 }}
-      sx={{ backgroundColor: "#11D2AC" }}
+      sx={{ backgroundColor: theme.palette.primary.main }}
     >
       <Grid container justifyContent={{ md: "center" }}>
-        <Grid>
+        <Grid
+          item
+          container
+          direction="column"
+          alignItems={{ xs: "start", md: "center" }}
+        >
           <SectionTitle mb={2}>Our Mission</SectionTitle>
           <LinearGradient />
         </Grid>

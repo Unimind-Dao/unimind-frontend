@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("../public/fonts/SpaceGrotesk-Medium.woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../public/fonts/Poppins-Regular.ttf");
+}
