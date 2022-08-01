@@ -1,12 +1,13 @@
 
 import Box from '@mui/system/Box';
+import React from 'react';
 import { SocialLinks } from '../../../SocialLinks/SocialLinks';
 
 const SocialBox = () => {
 	return (
 		<Box
 			sx={{
-				width: '10%',
+				
 				display: 'flex',
 				flexDirection: ' row',
 				justifyContent: 'center',

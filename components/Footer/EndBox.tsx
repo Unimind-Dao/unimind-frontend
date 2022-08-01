@@ -1,4 +1,5 @@
 import { Box} from '@mui/system';
+import React from 'react';
 
 export default function Footer() {
 	const sx = {
@@ -7,7 +8,7 @@ export default function Footer() {
 		flexDirection: 'row',
 		justifyContent: 'center',
 		alignItems: 'center',
-		color: 'grey',
+		color: 'rgba(255, 255, 255, 1)',
 	};
 
 	return (
