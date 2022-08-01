@@ -1,8 +1,6 @@
-import React from "react";
-
 import { Grid, Typography, useTheme } from "@mui/material";
-import { useBreakpoints } from "../../hooks/useBreakpoints";
-import { Content } from "../../layout/Content";
+import { Content } from "../../layout";
+import { useBreakpoints } from "../../hooks";
 import { Button } from "../Button";
 import { SocialLinks } from "../SocialLinks";
 
@@ -11,6 +9,7 @@ export const Hero = () => {
   const theme = useTheme();
 
   const width = isMobile ? "auto" : "50%";
+  console.log("🎉 theme.palette.secondary.main: ", theme.palette.secondary.main)
 
   return (
     <Grid sx={{ backgroundColor: theme.palette.common.black }} flexWrap="wrap">
