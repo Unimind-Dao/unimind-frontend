@@ -25,7 +25,7 @@ const TeamCards = () => {
 		fetcher
 	);
 	
-	const sx = { display: 'flex',   width: '60%', flexWrap:'wrap' , heigth:'auto' ,margin: 'auto',   alignItems: 'center',
+	const sx = { display: 'flex', flexWrap:'wrap' , heigth:'auto' , margin: 'auto',   alignItems: 'center',
   justifyContent: 'center'};
   
   return (
