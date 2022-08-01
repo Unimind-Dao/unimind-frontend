@@ -1,13 +1,13 @@
 import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
-import '@rainbow-me/rainbowkit/styles.css';
+import { ThemeProvider } from "styled-components";
 import { darkTheme, getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { chain, configureChains, createClient, WagmiConfig, } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-import "../index.css"
 import Toaster from "../components/Toaster/Toaster"
-import { ThemeProvider } from "styled-components";
 import { theme } from "../theme/theme";
+import '@rainbow-me/rainbowkit/styles.css';
+import "../index.css"
 
 const { chains, provider } = configureChains(
   [chain.rinkeby],

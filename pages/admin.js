@@ -3,17 +3,17 @@ import { ButtonLink } from "../components/Button";
 import useWallet from "../hooks/useWallet";
 
 const AdminPage = () => {
-  const { address, loading, allowed, isConnecting } = useWallet();
+  const { address, isLoading, isAllowed, isConnecting } = useWallet();
 
   if (!address && !isConnecting) return <h1>Please connect your wallet. 💳</h1>;
 
-  if (loading) return <h1>Checking your status... 👷</h1>;
+  if (isLoading) return <h1>Checking your status... 👷</h1>;
 
-  if (!allowed && !loading) return <h1>You are not allowed here. 🚨</h1>;
+  if (!isAllowed && !isLoading) return <h1>You are not allowed here. 🚨</h1>;
 
-  if (allowed && !loading) return (
+  if (isAllowed && !isLoading) return (
     <>
-      <h1>hello, {shortenAddress(address)}! 🎉</h1>
+      <h1>Hello, {shortenAddress(address)}! 🎉</h1>
       <ButtonLink>Add a Post</ButtonLink>
     </>
   );

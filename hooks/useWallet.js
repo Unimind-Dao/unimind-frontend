@@ -1,22 +1,23 @@
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
-import { isMember } from "../utils";
 import { toast } from "react-hot-toast";
+import { isMember } from "../utils";
 
 const useWallet = () => {
   const { address, isConnecting } = useAccount();
-  const [allowed, setAllowed] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [isAllowed, setIsAllowed] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const amIMember = async () => {
     const memberStatus = await isMember(address);
+
     if (memberStatus) {
-      setAllowed(true);
-      setLoading(false);
+      setIsAllowed(true);
+      setIsLoading(false);
       toast.success("Verification completed successfully! 🥳");
     }
     if (!memberStatus) {
-      setLoading(false);
+      setIsLoading(false);
       toast.error("Verification failed. ✋");
     }
   };
@@ -27,7 +28,7 @@ const useWallet = () => {
     }
   }, [address]);
 
-  return { address, loading, allowed, isConnecting };
+  return { address, isLoading, isAllowed, isConnecting };
 
 };
 
