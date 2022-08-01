@@ -1,4 +1,5 @@
 import Box from '@mui/system/Box';
+import React from 'react';
 import LogoSvg from '../../../svg/Logo';
 
 export default function LogoBox() {
@@ -6,13 +7,14 @@ export default function LogoBox() {
 		<>
 			<Box
 				sx={{
-					width: '20%',
+					
 					display: 'flex',
 					flexDirection: 'column',
 					justifyContent: 'flex-start',
 					alignItems: 'center',
 					color: 'white',
 					ml: '5%',
+					
 				}}
 			>
 				<Box
