@@ -9,6 +9,7 @@ import { useTheme } from "@mui/material";
 import '@rainbow-me/rainbowkit/styles.css';
 import "../index.css"
 import "../styles/fonts.css";
+import { COLORS } from "../theme/theme";
 
 const { chains, provider } = configureChains(
   [chain.rinkeby],
@@ -37,13 +38,13 @@ function UnimindDao({ Component, pageProps }) {
       <ThirdwebProvider desiredChainId={chainId}>
         <WagmiConfig client={wagmiClient}>
           <RainbowKitProvider chains={chains} theme={darkTheme({
-            accentColor: theme.palette.primary.main,
+            accentColor: COLORS.primary,
             accentColorForeground: 'black',
             borderRadius: 'small',
             fontStack: 'system',
           })}>
-              <Component {...pageProps} />
-              <Toaster />
+            <Component {...pageProps} />
+            <Toaster />
           </RainbowKitProvider>
         </WagmiConfig>
       </ThirdwebProvider>
