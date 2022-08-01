@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { Button, styled } from "@mui/material";
 
-export const StyledSolidButton = styled.span`
+export const StyledButton = styled(Button)`
   color: ${({ theme }) => theme.palette.primary.main};
   border: 1px solid ${({ theme }) => theme.palette.primary.main};
   border-radius: 4px;
@@ -10,12 +10,7 @@ export const StyledSolidButton = styled.span`
   line-height: 24px;
 
   &:hover {
-    color: black;
+    color: ${({ theme }) => theme.palette.common.black};
     background: ${({ theme }) => theme.palette.primary.main};
   }
 `;
-
-export const StyledOutlineButton = styled.span`
-  ${StyledSolidButton};
-  background: none;
-`

@@ -5,9 +5,10 @@ import { chain, configureChains, createClient, WagmiConfig, } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import Toaster from "../components/Toaster/Toaster"
-import { theme } from "../theme/theme";
+import { useTheme } from "@mui/material";
 import '@rainbow-me/rainbowkit/styles.css';
 import "../index.css"
+import "../styles/fonts.css";
 
 const { chains, provider } = configureChains(
   [chain.rinkeby],
@@ -27,25 +28,27 @@ const wagmiClient = createClient({
 
 const chainId = ChainId.Rinkeby;
 
-
 function UnimindDao({ Component, pageProps }) {
+
+  const theme = useTheme();
+
   return (
-    <ThirdwebProvider desiredChainId={chainId}>
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains} theme={darkTheme({
-          accentColor: theme.colors.primary,
-          accentColorForeground: 'black',
-          borderRadius: 'small',
-          fontStack: 'system',
-        })}>
-          <ThemeProvider theme={theme}>
-            <Component {...pageProps} />
-            <Toaster />
-          </ThemeProvider>
-        </RainbowKitProvider>
-      </WagmiConfig>
-    </ThirdwebProvider>
+    <ThemeProvider theme={theme}>
+      <ThirdwebProvider desiredChainId={chainId}>
+        <WagmiConfig client={wagmiClient}>
+          <RainbowKitProvider chains={chains} theme={darkTheme({
+            accentColor: theme.palette.primary.main,
+            accentColorForeground: 'black',
+            borderRadius: 'small',
+            fontStack: 'system',
+          })}>
+              <Component {...pageProps} />
+              <Toaster />
+          </RainbowKitProvider>
+        </WagmiConfig>
+      </ThirdwebProvider>
+    </ThemeProvider>
   )
 }
 
-export default UnimindDao
+export default UnimindDao;

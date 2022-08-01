@@ -1,6 +1,6 @@
 import { shortenAddress } from "../utils";
-import { ButtonLink } from "../components/Button";
 import useWallet from "../hooks/useWallet";
+import { ButtonLink } from "../components/Button";
 
 const AdminPage = () => {
   const { address, isLoading, isAllowed, isConnecting } = useWallet();

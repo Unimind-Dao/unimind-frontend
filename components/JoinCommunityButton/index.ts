@@ -1,1 +1,1 @@
-export * from "./JoinCommunityButton";
+export * from "./JoinCommunityButtonStyled";
