@@ -18,45 +18,50 @@ export const MobileNavBar = () => {
   };
 
   return (
-    <div>
-      <IconButton
-        size="large"
-        edge="start"
-        color="secondary"
-        aria-label="menu"
-        sx={{ mr: 2 }}
-        id="basic-button"
-        aria-controls={open ? "basic-menu" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
-      >
-        <MenuIcon />
-      </IconButton>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
-      >
+		<div>
+			<IconButton
+				size='large'
+				edge='start'
+				color='secondary'
+				aria-label='menu'
+				sx={{ mr: 2 }}
+				id='basic-button'
+				aria-controls={open ? 'basic-menu' : undefined}
+				aria-haspopup='true'
+				aria-expanded={open ? 'true' : undefined}
+				onClick={handleClick}
+			>
+				<MenuIcon />
+			</IconButton>
+			<Menu
+				id='basic-menu'
+				anchorEl={anchorEl}
+				open={open}
+				onClose={handleClose}
+				MenuListProps={{
+					'aria-labelledby': 'basic-button',
+				}}
+			>
+				<MenuItem>
+					<CustomLink>About</CustomLink>
+				</MenuItem>
+				<MenuItem>
+					<CustomLink>Benefits</CustomLink>
+				</MenuItem>
+				<MenuItem>
+					<CustomLink>Team</CustomLink>
+				</MenuItem>
         <MenuItem>
-          <CustomLink>About</CustomLink>
+				<CustomLink href='/blog'>
+					Blog
+				</CustomLink>    
         </MenuItem>
-        <MenuItem>
-          <CustomLink>Benefits</CustomLink>
-        </MenuItem>
-        <MenuItem>
-          <CustomLink>Team</CustomLink>
-        </MenuItem>
-        <MenuItem>
-          <CustomLink href="https://webtrzy.xyz" target="_blank">
-            Webtrzy.xyz
-          </CustomLink>
-        </MenuItem>
-      </Menu>
-    </div>
-  );
+				<MenuItem>
+					<CustomLink href='https://webtrzy.xyz' target='_blank'>
+						Webtrzy.xyz
+					</CustomLink>
+				</MenuItem>
+			</Menu>
+		</div>
+	);
 };
