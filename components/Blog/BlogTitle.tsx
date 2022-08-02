@@ -7,7 +7,7 @@ const BlogTitle = () => {
    
 
 
-    const sx = { width: '700px', height:'auto', display:'flex', flexDirection: 'column' }
+    const sx = { width: '700px', height:'auto', display:'flex', flexDirection: 'column', marginTop:'100px', marginBottom:'50px' }
 
     return (
 			<Box sx={sx}>
