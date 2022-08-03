@@ -16,7 +16,12 @@ const JoinUnimindSection = () => {
       pb={{ xs: 11, md: 16 }}
       sx={{ backgroundColor: theme.palette.primary.main }}
     >
-      <Grid container justifyContent="center">
+      <Grid
+        container
+        justifyContent="center"
+        direction="column"
+        alignItems="center"
+      >
         <Grid item container direction="column" alignItems="center">
           <SectionTitle mb={2}>Join UNIMIND</SectionTitle>
           <LinearGradient />
