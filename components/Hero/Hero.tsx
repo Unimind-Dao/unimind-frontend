@@ -39,9 +39,11 @@ export const Hero = () => {
           The place where you will gain knowledge, build your network and go
           deep into the web 3.0 world.
         </Typography>
-        <Button href={process.env.NEXT_PUBLIC_DISCORD_INVITE_LINK}>
-          Join Community
-        </Button>
+        <Grid item width={{ sm: 205 }}>
+          <Button href={process.env.NEXT_PUBLIC_DISCORD_INVITE_LINK}>
+            Join Community
+          </Button>
+        </Grid>
         <SocialLinks pt={7} justifyContent={{ xs: "center", sm: "start" }} />
       </Content>
     </Grid>

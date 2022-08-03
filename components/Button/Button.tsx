@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from "react";
+import { CustomLink } from "../CustomLink";
 
 import {
   StyledCustomLink,
@@ -22,9 +23,9 @@ export const Button = ({
     );
 
   return href ? (
-    <StyledCustomLink href={href} target="_blank">
+    <CustomLink href={href} target="_blank">
       {internalButton}
-    </StyledCustomLink>
+    </CustomLink>
   ) : (
     internalButton
   );

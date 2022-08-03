@@ -32,12 +32,14 @@ const JoinUnimindSection = () => {
             possibilities.
           </Typography>
         </Grid>
-        <Button
-          href={process.env.NEXT_PUBLIC_DISCORD_INVITE_LINK}
-          variant="dark"
-        >
-          Join Community
-        </Button>
+        <Grid item width={{ xs: "100%", sm: 205 }}>
+          <Button
+            href={process.env.NEXT_PUBLIC_DISCORD_INVITE_LINK}
+            variant="dark"
+          >
+            Join Community
+          </Button>
+        </Grid>
       </Grid>
     </Content>
   );
