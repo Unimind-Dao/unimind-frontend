@@ -16,7 +16,12 @@ const JoinUnimindSection = () => {
       pb={{ xs: 11, md: 16 }}
       sx={{ backgroundColor: theme.palette.primary.main }}
     >
-      <Grid container justifyContent="center">
+      <Grid
+        container
+        justifyContent="center"
+        direction="column"
+        alignItems="center"
+      >
         <Grid item container direction="column" alignItems="center">
           <SectionTitle mb={2}>Join UNIMIND</SectionTitle>
           <LinearGradient />
@@ -27,7 +32,14 @@ const JoinUnimindSection = () => {
             possibilities.
           </Typography>
         </Grid>
-        <Button variant="dark">Join Community</Button>
+        <Grid item width={{ xs: "100%", sm: 205 }}>
+          <Button
+            href={process.env.NEXT_PUBLIC_DISCORD_INVITE_LINK}
+            variant="dark"
+          >
+            Join Community
+          </Button>
+        </Grid>
       </Grid>
     </Content>
   );
