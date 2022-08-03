@@ -9,7 +9,10 @@ export const Hero = () => {
   const theme = useTheme();
 
   const width = isMobile ? "auto" : "50%";
-  console.log("🎉 theme.palette.secondary.main: ", theme.palette.secondary.main)
+  console.log(
+    "🎉 theme.palette.secondary.main: ",
+    theme.palette.secondary.main
+  );
 
   return (
     <Grid sx={{ backgroundColor: theme.palette.common.black }} flexWrap="wrap">

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, LinkProps, useTheme } from "@mui/material";
 
@@ -16,4 +15,3 @@ export const CustomLink = (props: LinkProps) => {
     </Link>
   );
 };
-

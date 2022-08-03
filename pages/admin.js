@@ -11,13 +11,13 @@ const AdminPage = () => {
 
   if (!isAllowed && !isLoading) return <h1>You are not allowed here. 🚨</h1>;
 
-  if (isAllowed && !isLoading) return (
-    <>
-      <h1>Hello, {shortenAddress(address)}! 🎉</h1>
-      <ButtonLink>Add a Post</ButtonLink>
-    </>
-  );
-
+  if (isAllowed && !isLoading)
+    return (
+      <>
+        <h1>Hello, {shortenAddress(address)}! 🎉</h1>
+        <ButtonLink>Add a Post</ButtonLink>
+      </>
+    );
 };
 
 export default AdminPage;
