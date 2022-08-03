@@ -12,15 +12,19 @@ import theme from "../theme/theme";
 import { WhatDrivesUs } from "../components/WhatDrivesUs/WhatDrivesUs";
 import JoinUnimindSection from "../components/JoinUnimindSection/JoinUnimindSection";
 
+import { sectionName } from "../data/constants";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Header />
       <section>
-        <Header />
         <Hero />
+      </section>
+      <section id={sectionName.about}>
         <About />
       </section>
-      <section>
+      <section id={sectionName.benefits}>
         <OurMission />
       </section>
       <section>
@@ -29,10 +33,10 @@ function App() {
       <section>
         <JoinUnimindSection />
       </section>
-      <section>
+      <section id={sectionName.team}>
         <Team />
-        <Footer />
       </section>
+      <Footer />
     </ThemeProvider>
   );
 }

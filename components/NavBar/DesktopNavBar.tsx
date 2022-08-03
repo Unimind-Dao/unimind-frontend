@@ -4,6 +4,7 @@ import { Toolbar } from "@mui/material";
 
 import { CustomLink } from "../CustomLink";
 import ConnectWallet from "../Wallet/Connect";
+import { sectionLink, sectionName } from "../../data/constants";
 
 export type NavLinkType = {
   label: string;
@@ -17,9 +18,15 @@ export const DesktopNavBar = () => {
   return (
     <>
       <Toolbar sx={{ display: "flex", alignItems: "center" }} component="nav">
-        <CustomLink sx={sx}>About</CustomLink>
-        <CustomLink sx={sx}>Benefits</CustomLink>
-        <CustomLink sx={sx}>Team</CustomLink>
+        <CustomLink href={sectionLink.about} sx={sx}>
+          About
+        </CustomLink>
+        <CustomLink href={sectionLink.benefits} sx={sx}>
+          Benefits
+        </CustomLink>
+        <CustomLink href={sectionLink.team} sx={sx}>
+          Team
+        </CustomLink>
         <CustomLink sx={sx} href="https://webtrzy.xyz" target="_blank">
           Webtrzy.xyz
         </CustomLink>
