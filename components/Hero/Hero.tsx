@@ -9,7 +9,10 @@ export const Hero = () => {
   const theme = useTheme();
 
   const width = isMobile ? "auto" : "50%";
-  console.log("🎉 theme.palette.secondary.main: ", theme.palette.secondary.main)
+  console.log(
+    "🎉 theme.palette.secondary.main: ",
+    theme.palette.secondary.main
+  );
 
   return (
     <Grid sx={{ backgroundColor: theme.palette.common.black }} flexWrap="wrap">
@@ -35,7 +38,9 @@ export const Hero = () => {
           The place where you will gain knowledge, build your network and go
           deep into the web 3.0 world.
         </Typography>
-        <Button>Join Community</Button>
+        <Button href={process.env.NEXT_PUBLIC_DISCORD_INVITE_LINK}>
+          Join Community
+        </Button>
         <SocialLinks pt={7} justifyContent={{ xs: "center", sm: "start" }} />
       </Content>
     </Grid>

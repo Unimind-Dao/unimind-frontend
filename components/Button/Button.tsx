@@ -9,16 +9,23 @@ import {
 export const Button = ({
   variant = "light",
   children,
+  href = "",
 }: PropsWithChildren<{
   variant?: "light" | "dark";
+  href?: string;
 }>) => {
-  return (
-    <StyledCustomLink href="https://discord.gg/uKS4vjG8" target="_blank">
-      {variant === "light" ? (
-        <StyledLightButton>{children}</StyledLightButton>
-      ) : (
-        <StyledDarkButton>{children}</StyledDarkButton>
-      )}
+  const internalButton =
+    variant === "light" ? (
+      <StyledLightButton>{children}</StyledLightButton>
+    ) : (
+      <StyledDarkButton>{children}</StyledDarkButton>
+    );
+
+  return href ? (
+    <StyledCustomLink href={href} target="_blank">
+      {internalButton}
     </StyledCustomLink>
+  ) : (
+    internalButton
   );
 };
