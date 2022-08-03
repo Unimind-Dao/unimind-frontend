@@ -46,9 +46,12 @@ export const StyledDarkButton = styled(Button)`
 `;
 
 export const StyledCustomLink = styled(CustomLink)`
+  display: flex;
   width: 205px;
+  max-width: 205px;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
     width: 100%;
+    max-width: 205px;
   }
 `;

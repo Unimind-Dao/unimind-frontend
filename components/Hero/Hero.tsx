@@ -3,6 +3,7 @@ import { Content } from "../../layout";
 import { useBreakpoints } from "../../hooks";
 import { Button } from "../Button";
 import { SocialLinks } from "../SocialLinks";
+import React from "react";
 
 export const Hero = () => {
   const { isMobile } = useBreakpoints();
