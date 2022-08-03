@@ -1,7 +1,6 @@
 import React from "react";
-import { useTheme } from "@mui/system";
 import { Content } from "../../layout/Content";
-import { Grid } from "@mui/material";
+import { Grid, useTheme } from "@mui/material";
 import { SectionTitle } from "../SectionTitle";
 import { LinearGradient } from "../LinearGradient";
 import { DrivingSection } from "../DrivingSection/DrivingSection";
@@ -35,7 +34,7 @@ export const WhatDrivesUs = () => {
         columnSpacing={{ md: 8 }}
       >
         {data.map(({ title, icon, description }) => (
-          <Grid item flex={1}>
+          <Grid item flex={1} key={title}>
             <DrivingSection title={title} icon={icon}>
               {description}
             </DrivingSection>

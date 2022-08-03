@@ -2,6 +2,7 @@ import React from "react";
 
 export const data = [
   {
+    id: "1",
     title: (
       <>
         Are you interested <br /> or curious in…
@@ -13,6 +14,7 @@ export const data = [
     come to the right place.`,
   },
   {
+    id: "2",
     title: (
       <>
         Do you want to gain <br /> new competences in...
@@ -24,6 +26,7 @@ export const data = [
     passion with others.`,
   },
   {
+    id: "3",
     title: (
       <>
         Are you looking <br /> for opportunities..
