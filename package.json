@@ -44,8 +44,7 @@
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
     "prepare": "husky install",
-    "check-types": "tsc --pretty --noEmit",
-    "lint-staged": "lint-staged"
+    "check-types": "tsc --pretty --noEmit"
   },
   "browserslist": {
     "production": [
