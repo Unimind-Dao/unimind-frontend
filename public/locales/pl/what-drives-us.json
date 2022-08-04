@@ -1,0 +1,18 @@
+{
+  "knowledge": {
+    "title": "Wiedza",
+    "description": "Uczymy faktów tylko po to, aby każdy mógł sam myśleć i wyrobić sobie własne zdanie. Wytyczamy linię między jednym a drugim."
+  },
+  "transparency": {
+    "title": "Transparencja",
+    "description": "Nasze rozwiązania techniczne udostępniamy w formule open-source i cenimy bezpośrednią komunikację, dlatego większość rozmów utrzymujemy publicznie."
+  },
+  "responsibility ": {
+    "title": "Odpowiedzialność",
+    "description": "Działamy w sposób samoorganizujący się, gdzie każdy może zaproponować własną inicjatywę, być odpowiedzialnym za jej realizację i jednoczyć wokół niej inne osoby."
+  },
+  "collaboration": {
+    "title": "Współpraca",
+    "description": "Wierzymy w siłę społeczności i korzyści płynące z przynależności do grupy. Zdecyduj, w co chcesz się zaangażować i rozwijaj się razem z nami."
+  }
+}
