@@ -10,6 +10,8 @@ import { SocialLinks } from "../SocialLinks";
 
 export const Hero = () => {
   const { t } = useTranslation("hero");
+  const { t: tCommon } = useTranslation("common");
+
   const { isMobile } = useBreakpoints();
   const theme = useTheme();
 
@@ -37,7 +39,7 @@ export const Hero = () => {
         >
           {t("description")}
         </Typography>
-        <Button>Join Community</Button>
+        <Button>{tCommon("joinCommunity")}</Button>
         <SocialLinks pt={7} justifyContent={{ xs: "center", sm: "start" }} />
       </Content>
     </Grid>
