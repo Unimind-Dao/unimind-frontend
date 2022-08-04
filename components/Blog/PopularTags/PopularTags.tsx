@@ -4,8 +4,8 @@ import Tags from './Tags';
 
 const PopularTags = () => {
 	return (
-		<Box>
-			<Typography variant='h3'>Popular Tags</Typography>
+		<Box sx={{display: 'flex', flexDirection:'row'}}>
+			<Typography variant='h3' sx={{marginRight:'30px'}}>Popular Tags</Typography>
 			<Tags></Tags>
 		</Box>
 	);

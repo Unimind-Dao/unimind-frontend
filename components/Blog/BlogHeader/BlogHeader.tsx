@@ -17,6 +17,7 @@ const BlogHeader = () => {
 
         </Box>
             <PopularTags />
+            <Authors />
         
         
         </>
