@@ -1,4 +1,5 @@
 {
+  "header": "Co nas napędza",
   "knowledge": {
     "title": "Wiedza",
     "description": "Uczymy faktów tylko po to, aby każdy mógł sam myśleć i wyrobić sobie własne zdanie. Wytyczamy linię między jednym a drugim."
@@ -7,7 +8,7 @@
     "title": "Transparencja",
     "description": "Nasze rozwiązania techniczne udostępniamy w formule open-source i cenimy bezpośrednią komunikację, dlatego większość rozmów utrzymujemy publicznie."
   },
-  "responsibility ": {
+  "responsibility": {
     "title": "Odpowiedzialność",
     "description": "Działamy w sposób samoorganizujący się, gdzie każdy może zaproponować własną inicjatywę, być odpowiedzialnym za jej realizację i jednoczyć wokół niej inne osoby."
   },

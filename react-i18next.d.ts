@@ -16,10 +16,10 @@ declare module "react-i18next" {
       navigation: typeof navigation;
       hero: typeof hero;
       about: typeof about;
-      joinUnimind: typeof joinUnimind;
-      meetUs: typeof meetUs;
+      ["join-unimind"]: typeof joinUnimind;
+      ["meet-us"]: typeof meetUs;
       mission: typeof mission;
-      whatDrivesUs: typeof whatDrivesUs;
+      ["what-drives-us"]: typeof whatDrivesUs;
     };
   }
 }

@@ -1,34 +1,31 @@
-import { Box} from '@mui/material';
-import React from 'react';
-import { useId } from 'react';
-import { CustomLink } from '../CustomLink';
+import React, { useId } from "react";
+import { Box } from "@mui/material";
+import { useTranslation } from "next-i18next";
+
+import { CustomLink } from "../CustomLink";
+
+const social = [
+  { name: "contact", link: "https://unimind-dao.com/" },
+  { name: "webtrzy", link: "https://webtrzy.xyz/" },
+];
 
 const ContactBox = () => {
-	const Id = useId();
+  const Id = useId();
+  const { t } = useTranslation("navigation");
 
-	const social = [
-		{ name: 'Contact', link: 'https://unimind-dao.com/' },
-		{ name: 'Webtrzy.xyz', link: 'https://webtrzy.xyz/' },
-		{ name: 'NFTPolska', link: 'https://nftpolska.net/' },
-	];
-
-	return (
-		<>
-			{social.map((label) => {
-				return (
-					<Box sx={{ margin: '20px' }} id={`${Id}-${label.name}`}>
-						<CustomLink
-							href={label.link}
-							underline='none'
-							sx={{ color: 'white' }}
-						>
-							{label.name}
-						</CustomLink>
-					</Box>
-				);
-			})}
-		</>
-	);
+  return (
+    <>
+      {social.map(({ name, link }) => {
+        return (
+          <Box sx={{ margin: "20px" }} id={`${Id}-${name}`}>
+            <CustomLink href={link} underline="none" sx={{ color: "white" }}>
+              {t(name)}
+            </CustomLink>
+          </Box>
+        );
+      })}
+    </>
+  );
 };
 
 export default ContactBox;

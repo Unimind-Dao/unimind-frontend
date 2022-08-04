@@ -31,7 +31,7 @@ export const About = () => {
                 </>
               }
             >
-              {t(`${card}.description`)}
+              <>{t(`${card}.description`)}</>
             </SingleCard>
           </Grid>
         ))}
