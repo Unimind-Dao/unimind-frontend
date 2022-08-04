@@ -34,8 +34,8 @@ export const WhatDrivesUs = () => {
         rowSpacing={{ xs: 8, md: 0 }}
         columnSpacing={{ md: 8 }}
       >
-        {data.map(({ title, icon, description }) => (
-          <Grid item flex={1}>
+        {data.map(({ title, icon, description, id }) => (
+          <Grid item flex={1} key={id}>
             <DrivingSection title={title} icon={icon}>
               {description}
             </DrivingSection>

@@ -7,16 +7,20 @@ const ContactBox = () => {
   const Id = useId();
 
   const social = [
-    { name: "Contact", link: "https://unimind-dao.com/" },
-    { name: "Webtrzy.xyz", link: "https://webtrzy.xyz/" },
-    { name: "NFTPolska", link: "https://nftpolska.net/" },
+    { id: "1", name: "Contact", link: "https://unimind-dao.com/" },
+    { id: "2", name: "Webtrzy.xyz", link: "https://webtrzy.xyz/" },
+    { id: "3", name: "NFTPolska", link: "https://nftpolska.net/" },
   ];
 
   return (
     <>
       {social.map((label) => {
         return (
-          <Box sx={{ margin: "20px" }} id={`${Id}-${label.name}`}>
+          <Box
+            sx={{ margin: "20px" }}
+            id={`${Id}-${label.name}`}
+            key={label.id}
+          >
             <CustomLink
               href={label.link}
               underline="none"

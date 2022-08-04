@@ -16,7 +16,7 @@ type IData = {
   linkedin: string;
 };
 
-const fetcher = (url) => axios.get(url).then((res) => res.data);
+const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 const TeamCards = () => {
   const { data, error } = useSWR(

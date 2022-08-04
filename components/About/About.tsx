@@ -20,8 +20,8 @@ export const About = () => {
         rowSpacing={{ xs: 5, md: 0 }}
         direction={{ xs: "column", md: "row" }}
       >
-        {data.map(({ title, description }) => (
-          <Grid container item xs={4}>
+        {data.map(({ title, description, id }) => (
+          <Grid container item key={id} xs={4}>
             <SingleCard title={title}>{description}</SingleCard>
           </Grid>
         ))}
