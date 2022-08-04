@@ -1,15 +1,19 @@
+import React from "react";
+import { useTranslation } from "next-i18next";
+
 import { Grid, Typography, useTheme } from "@mui/material";
+
 import { Content } from "../../layout";
 import { useBreakpoints } from "../../hooks";
 import { Button } from "../Button";
 import { SocialLinks } from "../SocialLinks";
 
 export const Hero = () => {
+  const { t } = useTranslation("hero");
   const { isMobile } = useBreakpoints();
   const theme = useTheme();
 
   const width = isMobile ? "auto" : "50%";
-  console.log("🎉 theme.palette.secondary.main: ", theme.palette.secondary.main)
 
   return (
     <Grid sx={{ backgroundColor: theme.palette.common.black }} flexWrap="wrap">
@@ -23,7 +27,7 @@ export const Hero = () => {
           pb={3}
           pt={12}
         >
-          Be where the change happens with UNIMIND.DAO
+          {t("title")}
         </Typography>
         <Typography
           color={theme.palette.secondary.main}
@@ -31,9 +35,7 @@ export const Hero = () => {
           lineHeight={1.5}
           pb={6}
         >
-          First and only DAO Community in Poland created by people for people.
-          The place where you will gain knowledge, build your network and go
-          deep into the web 3.0 world.
+          {t("description")}
         </Typography>
         <Button>Join Community</Button>
         <SocialLinks pt={7} justifyContent={{ xs: "center", sm: "start" }} />
