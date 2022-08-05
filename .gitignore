@@ -29,3 +29,5 @@ yarn-error.log*
 
 # WebStorm 
 .idea/
+# Vercel
+.vercel
