@@ -5,6 +5,6 @@ module.exports = {
     defaultLocale: "en",
     locales: ["en", "pl"],
     // temporally add for development
-    localeDetection: false,
+    // localeDetection: false,
   },
 };

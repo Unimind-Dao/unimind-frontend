@@ -1,12 +1,10 @@
-import React from "react";
-
 import { Grid, Typography, useTheme } from "@mui/material";
 import { useTranslation } from "next-i18next";
 
 import { Content } from "../../layout/Content";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
-import { Button } from "../Button/Button";
+import { Button } from "../Button";
 
 const JoinUnimindSection = () => {
   const theme = useTheme();
@@ -19,7 +17,7 @@ const JoinUnimindSection = () => {
       pb={{ xs: 11, md: 16 }}
       sx={{ backgroundColor: theme.palette.primary.main }}
     >
-      <Grid container justifyContent="center">
+      <Grid container justifyContent="center" alignItems="center" flexDirection="column">
         <Grid item container direction="column" alignItems="center">
           <SectionTitle mb={2}>{t("title")}</SectionTitle>
           <LinearGradient />

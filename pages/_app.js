@@ -1,20 +1,22 @@
+import { ThemeProvider } from "@mui/material";
 import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
-import { ThemeProvider } from "styled-components";
 import {
   darkTheme,
   getDefaultWallets,
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
-import { appWithTranslation } from "next-i18next";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import Toaster from "../components/Toaster/Toaster";
-import { useTheme } from "@mui/material";
+import "@rainbow-me/rainbowkit/styles.css";
+import theme from "../theme/theme";
+import "../index.css";
+import "../styles/fonts.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import "../index.css";
 import "../styles/fonts.css";
-import { COLORS } from "../theme/theme";
+import { appWithTranslation } from "next-i18next";
 
 const { chains, provider } = configureChains(
   [chain.rinkeby],
@@ -35,8 +37,6 @@ const wagmiClient = createClient({
 const chainId = ChainId.Rinkeby;
 
 function UnimindDao({ Component, pageProps }) {
-  const theme = useTheme();
-
   return (
     <ThemeProvider theme={theme}>
       <ThirdwebProvider desiredChainId={chainId}>
@@ -44,7 +44,7 @@ function UnimindDao({ Component, pageProps }) {
           <RainbowKitProvider
             chains={chains}
             theme={darkTheme({
-              accentColor: COLORS.primary,
+              accentColor: theme.palette.primary.main,
               accentColorForeground: "black",
               borderRadius: "small",
               fontStack: "system",

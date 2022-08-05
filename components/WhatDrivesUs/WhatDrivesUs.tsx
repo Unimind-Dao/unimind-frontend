@@ -13,8 +13,6 @@ export const WhatDrivesUs = () => {
   const theme = useTheme();
   const { t } = useTranslation("what-drives-us");
 
-  console.log('t("header")', t("header"));
-
   return (
     <Content
       pt={12}
@@ -40,13 +38,6 @@ export const WhatDrivesUs = () => {
         columnSpacing={{ md: 8 }}
       >
         {data.map(({ motivation, icon }) => {
-          console.log("motivation", motivation);
-          console.log("${motivation}.title", t(`${motivation}.title`));
-          console.log(
-            "${motivation}.description",
-            t(`${motivation}.description`)
-          );
-
           return (
             <Grid item flex={1}>
               <DrivingSection title={t(`${motivation}.title`)} icon={icon}>
