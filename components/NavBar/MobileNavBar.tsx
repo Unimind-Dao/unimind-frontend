@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-
+import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import { IconButton, useTheme } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { IconButton, useTheme } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import { CustomLink } from "../CustomLink";
 
 export const MobileNavBar = () => {

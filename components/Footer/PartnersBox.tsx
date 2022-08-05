@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+
 import ContactBox from "./ContactBox";
 
 export default function PartnersBox() {

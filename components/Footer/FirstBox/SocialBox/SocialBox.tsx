@@ -1,5 +1,5 @@
 import Box from "@mui/system/Box";
-import React from "react";
+
 import { SocialLinks } from "../../../SocialLinks/SocialLinks";
 
 const SocialBox = () => {

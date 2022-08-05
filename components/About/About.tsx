@@ -1,9 +1,9 @@
-import React from "react";
 import { Grid, useTheme } from "@mui/material";
 
 import { Content } from "../../layout/Content";
-import { SingleCard } from "./SingleCard";
+
 import { data } from "./data";
+import { SingleCard } from "./SingleCard";
 
 export const About = () => {
   const theme = useTheme();

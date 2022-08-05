@@ -1,10 +1,11 @@
-import React from "react";
-import { useTheme } from "@mui/system";
-import { Content } from "../../layout/Content";
 import { Grid } from "@mui/material";
-import { SectionTitle } from "../SectionTitle";
-import { LinearGradient } from "../LinearGradient";
+import { useTheme } from "@mui/system";
+
+import { Content } from "../../layout/Content";
 import { DrivingSection } from "../DrivingSection/DrivingSection";
+import { LinearGradient } from "../LinearGradient";
+import { SectionTitle } from "../SectionTitle";
+
 import { data } from "./data";
 
 export const WhatDrivesUs = () => {

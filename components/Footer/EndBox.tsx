@@ -1,6 +1,4 @@
 import { Box } from "@mui/system";
-import React from "react";
-
 export default function Footer() {
   const sx = {
     width: "100%",

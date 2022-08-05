@@ -1,5 +1,7 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
+
 import { CustomLink } from "../CustomLink";
+
 import { StyledSolidButton } from "./ButtonStyles";
 
 interface Props {

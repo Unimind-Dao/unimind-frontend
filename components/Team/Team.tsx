@@ -1,6 +1,8 @@
 import { Box } from "@mui/material";
+
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
+
 import Bridge from "./Bridge";
 import TeamCards from "./TeamCards";
 

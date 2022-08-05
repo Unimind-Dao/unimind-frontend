@@ -1,5 +1,5 @@
 import Box from "@mui/system/Box";
-import React from "react";
+
 import LogoSvg from "../../../svg/Logo";
 
 export default function LogoBox() {

@@ -1,10 +1,10 @@
-import { Avatar, Box, Card, Typography } from "@mui/material";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import DiscordIcon from "../svg/Discord";
 import { Key } from "react";
-import React from "react";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import { Avatar, Box, Card, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
+
+import DiscordIcon from "../svg/Discord";
 
 type IData = {
   id: string;
