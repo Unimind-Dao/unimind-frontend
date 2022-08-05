@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import React from "react";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
 import Bridge from "./Bridge";
