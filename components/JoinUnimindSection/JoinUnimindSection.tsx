@@ -8,8 +8,7 @@ import { Button } from "../Button";
 
 const JoinUnimindSection = () => {
   const theme = useTheme();
-  const { t } = useTranslation("join-unimind");
-  const { t: tCommon } = useTranslation("common");
+  const { t } = useTranslation(["join-unimind", "common"]);
 
   return (
     <Content
@@ -17,17 +16,22 @@ const JoinUnimindSection = () => {
       pb={{ xs: 11, md: 16 }}
       sx={{ backgroundColor: theme.palette.primary.main }}
     >
-      <Grid container justifyContent="center" alignItems="center" flexDirection="column">
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+      >
         <Grid item container direction="column" alignItems="center">
-          <SectionTitle mb={2}>{t("title")}</SectionTitle>
+          <SectionTitle mb={2}>{t("join-unimind:title")}</SectionTitle>
           <LinearGradient />
         </Grid>
         <Grid item md={10} mb={5}>
           <Typography mt={5} variant="body1" textAlign="center">
-            {t("description")}
+            {t("join-unimind:description")}
           </Typography>
         </Grid>
-        <Button variant="dark">{tCommon("joinCommunity")}</Button>
+        <Button variant="dark">{t("common:joinCommunity")}</Button>
       </Grid>
     </Content>
   );

@@ -9,8 +9,7 @@ import { Button } from "../Button";
 import { SocialLinks } from "../SocialLinks";
 
 export const Hero = () => {
-  const { t } = useTranslation("hero");
-  const { t: tCommon } = useTranslation("common");
+  const { t } = useTranslation(["hero", "common"]);
 
   const { isMobile } = useBreakpoints();
   const theme = useTheme();
@@ -29,7 +28,7 @@ export const Hero = () => {
           pb={3}
           pt={12}
         >
-          {t("title")}
+          {t("hero:title")}
         </Typography>
         <Typography
           color={theme.palette.secondary.main}
@@ -39,7 +38,7 @@ export const Hero = () => {
         >
           {t("description")}
         </Typography>
-        <Button>{tCommon("joinCommunity")}</Button>
+        <Button>{t("common:joinCommunity")}</Button>
         <SocialLinks pt={7} justifyContent={{ xs: "center", sm: "start" }} />
       </Content>
     </Grid>
