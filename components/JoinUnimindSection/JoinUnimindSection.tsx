@@ -1,11 +1,8 @@
-import React from "react";
-
 import { Grid, Typography, useTheme } from "@mui/material";
-
-import { Content } from "../../layout/Content";
+import { Content } from "../../layout";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
-import { Button } from "../Button/Button";
+import { Button } from "../Button";
 
 const JoinUnimindSection = () => {
   const theme = useTheme();
@@ -19,8 +16,8 @@ const JoinUnimindSection = () => {
       <Grid
         container
         justifyContent="center"
-        direction="column"
         alignItems="center"
+        flexDirection="column"
       >
         <Grid item container direction="column" alignItems="center">
           <SectionTitle mb={2}>Join UNIMIND</SectionTitle>
@@ -28,7 +25,7 @@ const JoinUnimindSection = () => {
         </Grid>
         <Grid item md={10} mb={5}>
           <Typography mt={5} variant="body1" textAlign="center">
-            Create the world of WEB 3 with us and open yourself to new
+            Create the world of Web3 with us and open yourself to new
             possibilities.
           </Typography>
         </Grid>

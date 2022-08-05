@@ -1,4 +1,5 @@
 import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import {
   darkTheme,
   getDefaultWallets,
@@ -8,12 +9,10 @@ import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import Toaster from "../components/Toaster/Toaster";
-
+import theme from "../theme/theme";
 import "@rainbow-me/rainbowkit/styles.css";
 import "../index.css";
 import "../styles/fonts.css";
-import theme from "../theme/theme";
-import { CssBaseline, ThemeProvider } from "@mui/material";
 
 const { chains, provider } = configureChains(
   [chain.rinkeby],
@@ -34,8 +33,6 @@ const wagmiClient = createClient({
 const chainId = ChainId.Rinkeby;
 
 function UnimindDao({ Component, pageProps }) {
-  console.log("theme.palette.primary.main", theme.palette.primary.main);
-
   return (
     <ThemeProvider theme={theme}>
       <ThirdwebProvider desiredChainId={chainId}>
@@ -50,9 +47,7 @@ function UnimindDao({ Component, pageProps }) {
               fontStack: "system",
             })}
           >
-            <ThemeProvider theme={theme}>
-              <Component {...pageProps} />
-            </ThemeProvider>
+            <Component {...pageProps} />
             <Toaster />
           </RainbowKitProvider>
         </WagmiConfig>

@@ -9,11 +9,8 @@ import { SocialLinks } from "../SocialLinks";
 export const Hero = () => {
   const { isMobile } = useBreakpoints();
   const theme = useTheme();
-  console.log("theme", theme);
 
   const width = isMobile ? "auto" : "50%";
-
-  console.log("theme.palette.secondary.main", theme.palette.secondary.main);
 
   return (
     <Grid sx={{ backgroundColor: theme.palette.common.black }} flexWrap="wrap">

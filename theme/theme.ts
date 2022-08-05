@@ -8,17 +8,31 @@ export const COLORS = {
 
 const theme = createTheme({
   palette: {
-    mode: "dark",
-    primary: { main: COLORS.primary, contrastText: COLORS.black },
-    secondary: { main: COLORS.white },
-    common: { black: COLORS.black, white: COLORS.white },
+    primary: {
+      main: COLORS.primary,
+      contrastText: COLORS.black,
+    },
+    secondary: {
+      main: COLORS.white,
+    },
+    common: {
+      black: COLORS.black,
+      white: COLORS.white,
+    },
   },
   typography: {
     fontFamily: ["Poppins"].join(""),
-
-    h1: { fontFamily: "SpaceGrotesk", color: COLORS.white },
-    h2: { fontFamily: "SpaceGrotesk", color: COLORS.white },
-    h3: { fontSize: "18px", lineHeight: "150%", fontWeight: "600" },
+    h1: {
+      fontFamily: "SpaceGrotesk",
+    },
+    h2: {
+      fontFamily: "SpaceGrotesk",
+    },
+    h3: {
+      fontSize: "18px",
+      lineHeight: "150%",
+      fontWeight: "600",
+    },
   },
 });
 
