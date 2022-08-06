@@ -4,7 +4,6 @@ import { useTranslation } from "next-i18next";
 import { Content } from "../../layout/Content";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
-import { Button } from "../Button";
 
 const JoinUnimindSection = () => {
   const theme = useTheme();

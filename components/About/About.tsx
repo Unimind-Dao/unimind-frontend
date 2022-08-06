@@ -1,4 +1,3 @@
-import React from "react";
 import { Grid, useTheme } from "@mui/material";
 import { useTranslation } from "next-i18next";
 

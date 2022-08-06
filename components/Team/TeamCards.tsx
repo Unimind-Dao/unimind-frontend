@@ -1,9 +1,8 @@
 import { Box } from "@mui/material";
-import TeammateCard from "./TeammateCard";
-import React from "react";
+import axios from "axios";
 import useSWR from "swr";
 
-import axios from "axios";
+import TeammateCard from "./TeammateCard";
 
 type IData = {
   id: string;
@@ -30,7 +29,7 @@ const TeamCards = () => {
     heigth: "auto",
     margin: "auto",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   };
 
   return (

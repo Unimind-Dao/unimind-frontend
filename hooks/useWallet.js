@@ -24,12 +24,11 @@ const useWallet = () => {
 
   useEffect(() => {
     if (!isConnecting) {
-      amIMember().catch(err => console.error(err));
+      amIMember().catch((err) => console.error(err));
     }
   }, [address]);
 
   return { address, isLoading, isAllowed, isConnecting };
-
 };
 
 export default useWallet;

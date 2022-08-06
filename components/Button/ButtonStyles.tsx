@@ -18,4 +18,4 @@ export const StyledSolidButton = styled.span`
 export const StyledOutlineButton = styled.span`
   ${StyledSolidButton};
   background: none;
-`
+`;

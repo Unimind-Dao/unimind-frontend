@@ -8,6 +8,7 @@ import {
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
+
 import Toaster from "../components/Toaster/Toaster";
 import "@rainbow-me/rainbowkit/styles.css";
 import theme from "../theme/theme";

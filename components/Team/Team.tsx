@@ -4,6 +4,7 @@ import { useTranslation } from "next-i18next";
 
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
+
 import Bridge from "./Bridge";
 import TeamCards from "./TeamCards";
 

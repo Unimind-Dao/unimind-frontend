@@ -1,4 +1,5 @@
 import { CustomLink } from "../CustomLink";
+
 import { StyledJoinCommunityButton } from "./JoinCommunityButton.styled";
 
 export const JoinCommunityButtonStyled = () => {

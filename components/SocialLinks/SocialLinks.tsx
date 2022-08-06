@@ -1,7 +1,5 @@
-import React from "react";
-
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Grid, GridProps } from "@mui/material";
 
 import DiscordIcon from "../svg/Discord";
