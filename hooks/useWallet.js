@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useAccount } from "wagmi";
 import { toast } from "react-hot-toast";
+import { useAccount } from "wagmi";
+
 import { isMember } from "../utils";
 
 const useWallet = () => {
@@ -24,12 +25,11 @@ const useWallet = () => {
 
   useEffect(() => {
     if (!isConnecting) {
-      amIMember().catch(err => console.error(err));
+      amIMember().catch((err) => console.error(err));
     }
   }, [address]);
 
   return { address, isLoading, isAllowed, isConnecting };
-
 };
 
 export default useWallet;

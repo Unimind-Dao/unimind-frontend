@@ -22,5 +22,5 @@ module.exports = {
       // Not supported yet.
       pure: true,
     },
-  }
-}
+  },
+};

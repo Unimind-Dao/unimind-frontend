@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Box, BoxProps } from "@mui/material";
 
 export const Content = (props: BoxProps) => {

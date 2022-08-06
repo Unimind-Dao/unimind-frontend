@@ -1,7 +1,7 @@
 import React from "react";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 import DiscordIcon from "../svg/Discord";
 import TiktokIcon from "../svg/TikTokLogo";

@@ -1,6 +1,7 @@
-import { Box } from "@mui/material";
 import React from "react";
 import { useId } from "react";
+import { Box } from "@mui/material";
+
 import { CustomLink } from "../CustomLink";
 
 const ContactBox = () => {
@@ -16,11 +17,7 @@ const ContactBox = () => {
     <>
       {social.map((label) => {
         return (
-          <Box
-            sx={{ margin: "20px" }}
-            key={`${Id}-${label.name}`}
-            id={`${Id}-${label.name}`}
-          >
+          <Box key={Id} sx={{ margin: "20px" }} id={`${Id}-${label.name}`}>
             <CustomLink
               href={label.link}
               underline="none"

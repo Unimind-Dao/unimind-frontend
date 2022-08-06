@@ -1,10 +1,8 @@
-import React from "react";
-
 import { Toolbar } from "@mui/material";
 
+import { sectionLink, sectionName } from "../../data/constants";
 import { CustomLink } from "../CustomLink";
 import ConnectWallet from "../Wallet/Connect";
-import { sectionLink, sectionName } from "../../data/constants";
 
 export type NavLinkType = {
   label: string;

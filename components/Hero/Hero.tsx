@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid, Typography, useTheme } from "@mui/material";
 
-import { Content } from "../../layout";
 import { useBreakpoints } from "../../hooks";
+import { Content } from "../../layout";
 import { Button } from "../Button";
 import { SocialLinks } from "../SocialLinks";
 
