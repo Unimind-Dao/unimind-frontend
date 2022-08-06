@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Grid, Typography, useTheme } from "@mui/material";
 
 import { Content } from "../../layout/Content";

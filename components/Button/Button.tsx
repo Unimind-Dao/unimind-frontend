@@ -1,9 +1,9 @@
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 
 import {
   StyledCustomLink,
-  StyledLightButton,
   StyledDarkButton,
+  StyledLightButton,
 } from "./Button.styled";
 
 export const Button = ({

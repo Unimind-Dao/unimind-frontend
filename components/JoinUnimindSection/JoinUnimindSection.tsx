@@ -1,8 +1,9 @@
 import { Grid, Typography, useTheme } from "@mui/material";
+
 import { Content } from "../../layout";
+import { Button } from "../Button";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
-import { Button } from "../Button";
 
 const JoinUnimindSection = () => {
   const theme = useTheme();

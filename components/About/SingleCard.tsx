@@ -1,6 +1,6 @@
-import React, { PropsWithChildren } from "react";
-
+import { PropsWithChildren } from "react";
 import { Typography, useTheme } from "@mui/material";
+
 import { StyledSingleCard } from "./SingleCard.styled";
 
 export const SingleCard = ({

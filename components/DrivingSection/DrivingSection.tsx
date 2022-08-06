@@ -1,10 +1,11 @@
+import { PropsWithChildren } from "react";
 import { Grid, Typography, useTheme } from "@mui/material";
-import React, { PropsWithChildren } from "react";
 
 import BulbIcon from "../svg/Bulb";
 import EyeIcon from "../svg/Eye";
 import GemIcon from "../svg/Gem";
 import LayersIcon from "../svg/Layers";
+
 import { StyledIconContainer } from "./DrivingSection.styled";
 
 const iconMapper = {

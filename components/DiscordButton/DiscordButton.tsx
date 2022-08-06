@@ -1,6 +1,5 @@
-import React from "react";
-
 import { CustomLink } from "../CustomLink";
+
 import { StyledButton } from "./DiscordButton.styled";
 
 export const DiscordButton = () => {
