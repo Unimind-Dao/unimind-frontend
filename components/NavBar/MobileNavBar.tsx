@@ -1,8 +1,7 @@
 import React, { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import { IconButton, Menu, MenuItem } from "@mui/material";
 import { useTranslation } from "next-i18next";
-
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 
 import { CustomLink } from "../CustomLink";
 

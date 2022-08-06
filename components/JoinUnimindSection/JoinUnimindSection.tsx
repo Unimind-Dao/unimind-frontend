@@ -2,6 +2,7 @@ import { Grid, Typography, useTheme } from "@mui/material";
 import { useTranslation } from "next-i18next";
 
 import { Content } from "../../layout/Content";
+import { Button } from "../Button";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
 

@@ -2,8 +2,9 @@ import { Grid, useTheme } from "@mui/material";
 import { useTranslation } from "next-i18next";
 
 import { Content } from "../../layout/Content";
-import { SingleCard } from "./SingleCard";
 import about from "../../public/locales/en/about.json";
+
+import { SingleCard } from "./SingleCard";
 
 export const About = () => {
   const theme = useTheme();
@@ -22,7 +23,7 @@ export const About = () => {
         direction={{ xs: "column", md: "row" }}
       >
         {Object.keys(about).map((card) => (
-          <Grid container item xs={4}>
+          <Grid key={card} container item xs={4}>
             <SingleCard
               title={
                 <>

@@ -1,9 +1,7 @@
 import React from "react";
+import { Grid, Typography, useTheme } from "@mui/material";
 import { useTranslation } from "next-i18next";
 
-import { Grid, Typography, useTheme } from "@mui/material";
-
-import { Content } from "../../layout";
 import { useBreakpoints } from "../../hooks";
 import { Content } from "../../layout";
 import { Button } from "../Button";
@@ -11,7 +9,6 @@ import { SocialLinks } from "../SocialLinks";
 
 export const Hero = () => {
   const { t } = useTranslation(["hero", "common"]);
-
   const { isMobile } = useBreakpoints();
   const theme = useTheme();
 
