@@ -1,13 +1,13 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { IconButton, useTheme } from "@mui/material";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import { IconButton, Menu, MenuItem } from "@mui/material";
+import { useTranslation } from "next-i18next";
 
 import { CustomLink } from "../CustomLink";
 
 export const MobileNavBar = () => {
-  const theme = useTheme();
+  const { t } = useTranslation("navigation");
+
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -43,17 +43,17 @@ export const MobileNavBar = () => {
         }}
       >
         <MenuItem>
-          <CustomLink>About</CustomLink>
+          <CustomLink>{t("about")}</CustomLink>
         </MenuItem>
         <MenuItem>
-          <CustomLink>Benefits</CustomLink>
+          <CustomLink>{t("benefits")}</CustomLink>
         </MenuItem>
         <MenuItem>
-          <CustomLink>Team</CustomLink>
+          <CustomLink>{t("team")}</CustomLink>
         </MenuItem>
         <MenuItem>
           <CustomLink href="https://webtrzy.xyz" target="_blank">
-            Webtrzy.xyz
+            {t("webtrzy")}
           </CustomLink>
         </MenuItem>
       </Menu>

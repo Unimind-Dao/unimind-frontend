@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { useTheme } from "@mui/system";
+import { useTranslation } from "next-i18next";
 
 import { Content } from "../../layout/Content";
 import { DrivingSection } from "../DrivingSection/DrivingSection";
@@ -10,6 +11,7 @@ import { data } from "./data";
 
 export const WhatDrivesUs = () => {
   const theme = useTheme();
+  const { t } = useTranslation("what-drives-us");
 
   return (
     <Content
@@ -25,7 +27,7 @@ export const WhatDrivesUs = () => {
         mb={8}
       >
         <SectionTitle color={theme.palette.common.white} mb={2}>
-          What drives us
+          {t("header")}
         </SectionTitle>
         <LinearGradient shade="light" />
       </Grid>
@@ -35,13 +37,15 @@ export const WhatDrivesUs = () => {
         rowSpacing={{ xs: 8, md: 0 }}
         columnSpacing={{ md: 8 }}
       >
-        {data.map(({ title, icon, description, id }) => (
-          <Grid item flex={1} key={id}>
-            <DrivingSection title={title} icon={icon}>
-              {description}
-            </DrivingSection>
-          </Grid>
-        ))}
+        {data.map(({ motivation, icon }) => {
+          return (
+            <Grid key={motivation} item flex={1}>
+              <DrivingSection title={t(`${motivation}.title`)} icon={icon}>
+                <>{t(`${motivation}.description`)}</>
+              </DrivingSection>
+            </Grid>
+          );
+        })}
       </Grid>
     </Content>
   );

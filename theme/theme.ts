@@ -3,39 +3,37 @@ import { createTheme } from "@mui/material";
 export const COLORS = {
   primary: "#11d2ac",
   white: "#ffffff",
-  black: "#1b1b1b"
+  black: "#1b1b1b",
 };
 
 const theme = createTheme({
   palette: {
     primary: {
       main: COLORS.primary,
-      contrastText: COLORS.black
+      contrastText: COLORS.black,
     },
     secondary: {
-      main: COLORS.white
+      main: COLORS.white,
     },
     common: {
       black: COLORS.black,
-      white: COLORS.white
-    }
+      white: COLORS.white,
+    },
   },
   typography: {
     fontFamily: ["Poppins"].join(""),
     h1: {
-      fontFamily:
-        "SpaceGrotesk"
+      fontFamily: "SpaceGrotesk",
     },
     h2: {
-      fontFamily:
-        "SpaceGrotesk"
+      fontFamily: "SpaceGrotesk",
     },
     h3: {
       fontSize: "18px",
       lineHeight: "150%",
-      fontWeight: "600"
-    }
-  }
+      fontWeight: "600",
+    },
+  },
 });
 
 export default createTheme(theme);

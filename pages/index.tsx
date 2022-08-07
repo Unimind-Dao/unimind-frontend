@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@mui/system";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { About } from "../components/About";
 import Footer from "../components/Footer/Footer";
@@ -33,6 +34,14 @@ function App() {
       </section>
     </ThemeProvider>
   );
+}
+
+export async function getStaticProps({ locale = "" }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  };
 }
 
 export default App;

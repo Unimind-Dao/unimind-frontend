@@ -1,8 +1,12 @@
+import React from "react";
 import Box from "@mui/system/Box";
+import { useTranslation } from "next-i18next";
 
 import LogoSvg from "../../../svg/Logo";
 
 export default function LogoBox() {
+  const { t } = useTranslation("common");
+
   return (
     <>
       <Box
@@ -25,7 +29,7 @@ export default function LogoBox() {
         >
           <LogoSvg />
         </Box>
-        <p style={{ fontSize: "15px" }}>Be where the change happens</p>
+        <p style={{ fontSize: "15px" }}>{t("outro")}</p>
       </Box>
     </>
   );

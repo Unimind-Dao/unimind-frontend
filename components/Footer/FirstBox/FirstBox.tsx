@@ -1,3 +1,4 @@
+import React from "react";
 import Box from "@mui/system/Box";
 
 import LogoBox from "./LogoBox/LogoBox";
