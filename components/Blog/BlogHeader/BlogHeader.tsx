@@ -1,5 +1,6 @@
 import { Box } from "@mui/material"
 import React from "react"
+import Authors from "../Authors"
 import PopularTags from "../PopularTags/PopularTags"
 import BlogTitle from "./BlogTitle"
 
