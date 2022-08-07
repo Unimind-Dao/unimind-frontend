@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Typography, TypographyProps } from "@mui/material";
 
 export const SectionTitle = (props: TypographyProps) => {

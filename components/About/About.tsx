@@ -1,12 +1,14 @@
-import React from "react";
 import { Grid, useTheme } from "@mui/material";
+import { useTranslation } from "next-i18next";
 
 import { Content } from "../../layout/Content";
+import about from "../../public/locales/en/about.json";
+
 import { SingleCard } from "./SingleCard";
-import { data } from "./data";
 
 export const About = () => {
   const theme = useTheme();
+  const { t } = useTranslation("about");
 
   return (
     <Content
@@ -20,9 +22,17 @@ export const About = () => {
         rowSpacing={{ xs: 5, md: 0 }}
         direction={{ xs: "column", md: "row" }}
       >
-        {data.map(({ title, description }) => (
-          <Grid container item xs={4}>
-            <SingleCard title={title}>{description}</SingleCard>
+        {Object.keys(about).map((card) => (
+          <Grid key={card} container item xs={4}>
+            <SingleCard
+              title={
+                <>
+                  {t(`${card}.title_1`)} <br /> {t(`${card}.title_2`)}
+                </>
+              }
+            >
+              <>{t(`${card}.description`)}</>
+            </SingleCard>
           </Grid>
         ))}
       </Grid>

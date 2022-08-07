@@ -8,6 +8,7 @@ export const COLORS = {
 };
 
 const theme = createTheme({
+
 	palette: {
 		primary: { main: COLORS.primary, contrastText: COLORS.black },
 		secondary: { main: COLORS.white },
@@ -20,6 +21,8 @@ const theme = createTheme({
 		h2: { fontFamily: 'SpaceGrotesk' },
 		h3: { fontSize: '18px', lineHeight: '150%', fontWeight: '600' },
 	},
+ 
+
 });
 
 export default createTheme(theme);

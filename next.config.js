@@ -1,3 +1,5 @@
+const { i18n } = require("./next-i18next.config");
+
 module.exports = {
   compiler: {
     // see https://styled-components.com/docs/tooling#babel-plugin for more info on the options.
@@ -22,5 +24,6 @@ module.exports = {
       // Not supported yet.
       pure: true,
     },
-  }
-}
+  },
+  i18n,
+};

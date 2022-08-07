@@ -1,14 +1,14 @@
-import React from "react";
-
 import { Grid, Typography, useTheme } from "@mui/material";
+import { useTranslation } from "next-i18next";
 
 import { Content } from "../../layout/Content";
+import { Button } from "../Button";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
-import { Button } from "../Button/Button";
 
 const JoinUnimindSection = () => {
   const theme = useTheme();
+  const { t } = useTranslation(["join-unimind", "common"]);
 
   return (
     <Content
@@ -16,18 +16,22 @@ const JoinUnimindSection = () => {
       pb={{ xs: 11, md: 16 }}
       sx={{ backgroundColor: theme.palette.primary.main }}
     >
-      <Grid container justifyContent="center">
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+      >
         <Grid item container direction="column" alignItems="center">
-          <SectionTitle mb={2}>Join UNIMIND</SectionTitle>
+          <SectionTitle mb={2}>{t("join-unimind:title")}</SectionTitle>
           <LinearGradient />
         </Grid>
         <Grid item md={10} mb={5}>
           <Typography mt={5} variant="body1" textAlign="center">
-            Create the world of WEB 3 with us and open yourself to new
-            possibilities.
+            {t("join-unimind:description")}
           </Typography>
         </Grid>
-        <Button variant="dark">Join Community</Button>
+        <Button variant="dark">{t("common:joinCommunity")}</Button>
       </Grid>
     </Content>
   );
