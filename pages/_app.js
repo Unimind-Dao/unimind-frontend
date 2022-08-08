@@ -5,6 +5,7 @@ import {
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+import { appWithTranslation } from "next-i18next";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
@@ -12,6 +13,9 @@ import { publicProvider } from "wagmi/providers/public";
 import Toaster from "../components/Toaster/Toaster";
 import theme from "../theme/theme";
 
+import "@rainbow-me/rainbowkit/styles.css";
+import "../index.css";
+import "../styles/fonts.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import "../index.css";
 import "../styles/fonts.css";
@@ -58,4 +62,4 @@ function UnimindDao({ Component, pageProps }) {
   );
 }
 
-export default UnimindDao;
+export default appWithTranslation(UnimindDao);

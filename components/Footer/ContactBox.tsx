@@ -1,29 +1,25 @@
-import React from "react";
-import { useId } from "react";
+import React, { useId } from "react";
 import { Box } from "@mui/material";
+import { useTranslation } from "next-i18next";
 
 import { CustomLink } from "../CustomLink";
 
+const social = [
+  { name: "contact", link: "https://unimind-dao.com/" },
+  { name: "webtrzy", link: "https://webtrzy.xyz/" },
+];
+
 const ContactBox = () => {
   const Id = useId();
-
-  const social = [
-    { name: "Contact", link: "https://unimind-dao.com/" },
-    { name: "Webtrzy.xyz", link: "https://webtrzy.xyz/" },
-    { name: "NFTPolska", link: "https://nftpolska.net/" },
-  ];
+  const { t } = useTranslation("navigation");
 
   return (
     <>
-      {social.map((label) => {
+      {social.map(({ name, link }) => {
         return (
-          <Box key={Id} sx={{ margin: "20px" }} id={`${Id}-${label.name}`}>
-            <CustomLink
-              href={label.link}
-              underline="none"
-              sx={{ color: "white" }}
-            >
-              {label.name}
+          <Box key={Id} sx={{ margin: "20px" }} id={`${Id}-${name}`}>
+            <CustomLink href={link} underline="none" sx={{ color: "white" }}>
+              {t(name)}
             </CustomLink>
           </Box>
         );

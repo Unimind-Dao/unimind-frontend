@@ -1,4 +1,6 @@
+import React from "react";
 import { Toolbar } from "@mui/material";
+import { useTranslation } from "next-i18next";
 
 import { sectionLink, sectionName } from "../../data/constants";
 import { CustomLink } from "../CustomLink";
@@ -13,20 +15,16 @@ export type NavLinkType = {
 const sx = { padding: "0 1.5rem", color: "white", lineHeight: "24px" };
 
 export const DesktopNavBar = () => {
+  const { t } = useTranslation("navigation");
+
   return (
     <>
       <Toolbar sx={{ display: "flex", alignItems: "center" }} component="nav">
-        <CustomLink href={sectionLink.about} sx={sx}>
-          About
-        </CustomLink>
-        <CustomLink href={sectionLink.benefits} sx={sx}>
-          Benefits
-        </CustomLink>
-        <CustomLink href={sectionLink.team} sx={sx}>
-          Team
-        </CustomLink>
+        <CustomLink sx={sx}>{t("about")}</CustomLink>
+        <CustomLink sx={sx}>{t("benefits")}</CustomLink>
+        <CustomLink sx={sx}>{t("team")}</CustomLink>
         <CustomLink sx={sx} href="https://webtrzy.xyz" target="_blank">
-          Webtrzy.xyz
+          {t("webtrzy")}
         </CustomLink>
         <ConnectWallet />
       </Toolbar>

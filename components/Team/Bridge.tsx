@@ -1,5 +1,10 @@
+import React from "react";
 import { Box, Typography } from "@mui/material";
+import { useTranslation } from "next-i18next";
+
 export default function Bridge() {
+  const { t } = useTranslation("meet-us");
+
   return (
     <>
       <Box sx={{ marginTop: "10px", marginBottom: "30px", width: "50%" }}>
@@ -9,9 +14,7 @@ export default function Bridge() {
           variant="body1"
           textAlign={{ md: "center" }}
         >
-          Meet the people behind UNIMIND. We're still growing and we're always
-          looking for passionate people who want to build decentralized
-          communities. Connect with us!
+          {t("description")}
         </Typography>
       </Box>
     </>
