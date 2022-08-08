@@ -1,10 +1,11 @@
+import React, { Key } from 'react';
 import { Box, Typography } from '@mui/material';
-import React from 'react';
-import useSWR from 'swr';
 import axios from 'axios';
+import useSWR from 'swr';
+
 import TeammateButton from '../TeammateButton/TeammateButton';
 
-const fetcher = (url) => axios.get(url).then((res) => res.data);
+const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 const Authors = () => {
 	const { data, error } = useSWR(
@@ -18,9 +19,20 @@ const Authors = () => {
 				<Typography variant='h3' sx={{ marginRight: '30px' }}>
 					Authors
 				</Typography>
-				{data?.map((mate) => {
-					return <TeammateButton name={mate.name} thumbnail={mate.thumbnail} />;
-				})}
+				{data?.map(
+					(mate: {
+						name: string;
+						thumbnail: string ;
+					}) => {
+						return (
+							<TeammateButton
+								key={mate.name}
+								name={mate.name}
+								thumbnail={mate.thumbnail}
+							/>
+						);
+					}
+				)}
 			</Box>
 		</>
 	);

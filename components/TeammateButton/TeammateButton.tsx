@@ -1,7 +1,13 @@
+import React, { Key } from 'react';
 import { Avatar, Button, Typography } from '@mui/material';
-import React from 'react';
 
-const TeammateButton = ({ name, thumbnail }) => {
+const TeammateButton = ({
+	name,
+	thumbnail,
+}: {
+	name: string;
+	thumbnail: string;
+}) => {
 	const sx = {
 		width: 'auto',
 		display: 'flex',

@@ -1,28 +1,27 @@
-import { Box } from "@mui/material"
+
 import React from "react"
+import { Box } from "@mui/material"
+
+import ArticlesPlace from "../ArticlesPlace/ArticlesPlace"
 import Authors from "../Authors"
 import PopularTags from "../PopularTags/PopularTags"
-import BlogTitle from "./BlogTitle"
 
+import BlogTitle from "./BlogTitle"
  
 const BlogHeader = () => {
 
     const sx = { width: '100%', height:'auto', display:'flex', flexDirection: 'row' }
 
     return (
-        <>
-        
-        <Box sx={sx}>
-            <BlogTitle />
-
-
-        </Box>
-            <PopularTags />
-            <Authors />
-        
-        
-        </>
-    )
+			<>
+				<Box sx={sx}>
+					<BlogTitle />
+				</Box>
+				<PopularTags />
+				<Authors />
+				<ArticlesPlace />
+			</>
+		);
 }
 
 export default BlogHeader;
