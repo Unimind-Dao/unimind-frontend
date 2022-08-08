@@ -36,7 +36,11 @@ export const Hero = () => {
         >
           {t("description")}
         </Typography>
-        <Button>{t("common:joinCommunity")}</Button>
+        <Grid item width={{ sm: 205 }}>
+          <Button href={process.env.NEXT_PUBLIC_DISCORD_INVITE_LINK}>
+            {t("common:joinCommunity")}
+          </Button>
+        </Grid>
         <SocialLinks pt={7} justifyContent={{ xs: "center", sm: "start" }} />
       </Content>
     </Grid>

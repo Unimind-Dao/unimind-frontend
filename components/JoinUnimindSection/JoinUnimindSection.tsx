@@ -31,7 +31,14 @@ const JoinUnimindSection = () => {
             {t("join-unimind:description")}
           </Typography>
         </Grid>
-        <Button variant="dark">{t("common:joinCommunity")}</Button>
+        <Grid item width={{ xs: "100%", sm: 205 }}>
+          <Button
+            href={process.env.NEXT_PUBLIC_DISCORD_INVITE_LINK}
+            variant="dark"
+          >
+            {t("common:joinCommunity")}
+          </Button>
+        </Grid>
       </Grid>
     </Content>
   );

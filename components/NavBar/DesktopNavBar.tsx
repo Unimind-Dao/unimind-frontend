@@ -2,6 +2,7 @@ import React from "react";
 import { Toolbar } from "@mui/material";
 import { useTranslation } from "next-i18next";
 
+import { sectionLink, sectionName } from "../../data/constants";
 import { CustomLink } from "../CustomLink";
 import ConnectWallet from "../Wallet/Connect";
 

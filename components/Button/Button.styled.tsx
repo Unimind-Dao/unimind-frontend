@@ -10,15 +10,11 @@ const commonButtonStyles = css`
   align-items: center;
   padding: 16px 30px;
   font-weight: bold;
-  flex: 1 1 100%;
+  width: 100%;
 `;
 
 export const StyledLightButton = styled(Button)`
   ${commonButtonStyles};
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    width: 100%;
-  }
 
   background: ${({ theme }) => theme.palette.primary.main};
   border: 1px solid ${({ theme }) => theme.palette.primary.main};
@@ -32,10 +28,6 @@ export const StyledLightButton = styled(Button)`
 export const StyledDarkButton = styled(Button)`
   ${commonButtonStyles};
 
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    width: 100%;
-  }
-
   background: ${({ theme }) => theme.palette.common.black};
   border: 1px solid ${({ theme }) => theme.palette.common.black};
   color: ${({ theme }) => theme.palette.common.white};
@@ -46,9 +38,11 @@ export const StyledDarkButton = styled(Button)`
 `;
 
 export const StyledCustomLink = styled(CustomLink)`
-  width: 205px;
+  display: flex;
+  width: 100%;
 
-  ${({ theme }) => theme.breakpoints.down("sm")} {
+  /* ${({ theme }) => theme.breakpoints.down("sm")} {
     width: 100%;
-  }
+    max-width: 205px;
+  } */
 `;

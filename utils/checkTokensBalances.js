@@ -1,4 +1,5 @@
 import { ethers } from "ethers";
+
 import ContractABI from "../contracts/abi.json";
 
 export const checkTokenBalances = async (address) => {

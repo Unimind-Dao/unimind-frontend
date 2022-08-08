@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useAccount } from "wagmi";
 import { toast } from "react-hot-toast";
+import { useAccount } from "wagmi";
+
 import { isMember } from "../utils";
 
 const useWallet = () => {

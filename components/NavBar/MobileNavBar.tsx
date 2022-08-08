@@ -3,6 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import { useTranslation } from "next-i18next";
 
+import { sectionLink } from "../../data/constants";
 import { CustomLink } from "../CustomLink";
 
 export const MobileNavBar = () => {
@@ -43,13 +44,13 @@ export const MobileNavBar = () => {
         }}
       >
         <MenuItem>
-          <CustomLink>{t("about")}</CustomLink>
+          <CustomLink href={sectionLink.about}>{t("about")}</CustomLink>
         </MenuItem>
         <MenuItem>
-          <CustomLink>{t("benefits")}</CustomLink>
+          <CustomLink href={sectionLink.benefits}>{t("benefits")}</CustomLink>
         </MenuItem>
         <MenuItem>
-          <CustomLink>{t("team")}</CustomLink>
+          <CustomLink href={sectionLink.team}>{t("team")}</CustomLink>
         </MenuItem>
         <MenuItem>
           <CustomLink href="https://webtrzy.xyz" target="_blank">
