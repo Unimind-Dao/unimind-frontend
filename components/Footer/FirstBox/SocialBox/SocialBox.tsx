@@ -1,17 +1,21 @@
+import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/system/Box";
 
+import theme from "../../../../theme/theme";
 import { SocialLinks } from "../../../SocialLinks/SocialLinks";
 
 const SocialBox = () => {
+  const matches = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: " row",
-        justifyContent: "center",
+        justifyContent: matches ? "center" : "flex-start",
         alignItems: "center",
         color: "white",
-        marginRight: " 100px",
+        marginRight: matches ? "0" : "100px",
       }}
     >
       <SocialLinks />

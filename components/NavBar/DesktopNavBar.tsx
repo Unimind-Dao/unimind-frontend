@@ -12,7 +12,12 @@ export type NavLinkType = {
   target?: string;
 };
 
-const sx = { padding: "0 1.5rem", color: "white", lineHeight: "24px" };
+const sx = {
+  padding: "0 1.5rem",
+  color: "white",
+  lineHeight: "24px",
+  position: "fixed",
+};
 
 export const DesktopNavBar = () => {
   const { t } = useTranslation("navigation");

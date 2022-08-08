@@ -27,7 +27,7 @@ const TeamCards = () => {
   const sx = {
     display: "flex",
     flexWrap: "wrap",
-    heigth: "auto",
+    height: "auto",
     margin: "auto",
     alignItems: "center",
     justifyContent: "center",
