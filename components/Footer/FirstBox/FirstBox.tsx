@@ -30,7 +30,7 @@ export default function FirstBox() {
           width: "100%",
           display: "flex",
           flexDirection: "row",
-          justifyContent: matches ? "center" : "flex-start",
+          justifyContent: matches ? "center" : "flex-end",
           alignItems: "center",
           color: "white",
         }}
