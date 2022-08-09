@@ -4,7 +4,7 @@ import FirstBox from "./FirstBox/FirstBox";
 import EndBox from "./EndBox";
 import PartnersBox from "./PartnersBox";
 
-export function Footer() {
+export const Footer = () => {
   const sx = { width: "100%", height: "auto", bgcolor: "#1B1B1B", paddingTop: "3rem" };
 
   return (
