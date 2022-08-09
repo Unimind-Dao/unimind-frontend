@@ -11,7 +11,7 @@ export default function PartnersBox() {
     width: "100%",
     display: "flex",
     flexDirection: "row",
-    justifyContent:"center",
+    justifyContent: "center",
     alignItems: "center",
     color: "grey",
   };

@@ -17,6 +17,7 @@ const sx = {
   color: "white",
   lineHeight: "24px",
   position: "fixed",
+  
 };
 
 export const DesktopNavBar = () => {
@@ -24,7 +25,7 @@ export const DesktopNavBar = () => {
 
   return (
     <>
-      <Toolbar sx={{ display: "flex", alignItems: "center" }} component="nav">
+      <Toolbar sx={{ display: "flex", alignItems: "center", zIndex: "1",}} component="nav">
         <CustomLink sx={sx}>{t("about")}</CustomLink>
         <CustomLink sx={sx}>{t("benefits")}</CustomLink>
         <CustomLink sx={sx}>{t("team")}</CustomLink>

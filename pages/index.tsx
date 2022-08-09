@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
 import { About, Footer,Header, Hero, JoinUnimindSection, OurMission, Team, WhatDrivesUs } from "../components";
+import Partners from '../components/Partners/Partners'
 import { sectionName } from "../data/constants";
 
 function App() {
@@ -27,6 +27,9 @@ function App() {
         <Team />
       </SectionWithPadding>
       <StyledDivider />
+      <section>
+        <Partners />
+      </section>
       <Footer />
     </>
   );
