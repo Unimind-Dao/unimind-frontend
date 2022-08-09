@@ -4,6 +4,6 @@ export * from "./Header";
 export * from "./Hero";
 export * from "./JoinUnimindSection";
 export * from "./OurMission";
-export * from "./Team";
+export * from "./Partners";
 export * from "./Team";
 export * from "./WhatDrivesUs";

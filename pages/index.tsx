@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { About, Footer,Header, Hero, JoinUnimindSection, OurMission, Team, WhatDrivesUs } from "../components";
-import Partners from '../components/Partners/Partners'
+
+import { About, Footer,Header, Hero, JoinUnimindSection, OurMission, Partners, Team,WhatDrivesUs } from "../components";
 import { sectionName } from "../data/constants";
 
 function App() {
