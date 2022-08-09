@@ -25,22 +25,18 @@ const PartnersLogo = () => {
 	return (
 		<>
 			<Box sx={sx}>
-                <Box sx={{margin:'20px'}}>
-<Image src={swiatweb3} alt='me' width='300' height='64' />
-                </Box>
-                <Box sx={{margin:'20px'}}>
-                    <Image src={scio} alt='me' width='300' height='100' />
-                </Box>
-                <Box sx={{margin:'20px'}}>
-                    <Image src={web3devs} alt='me' width='200' height='200' />
-                </Box>
-                <Box sx={{margin:'20px'}}>
-                    <Image src={webtrzy} alt='me' width='300' height='64' />
-                </Box>
-				
-				
-				
-				
+				<Box sx={{ margin: '20px' }}>
+					<Image src={swiatweb3} alt='swiatweb3' width='300' height='64' />
+				</Box>
+				<Box sx={{ margin: '20px' }}>
+					<Image src={scio} alt='scio' width='300' height='100' />
+				</Box>
+				<Box sx={{ margin: '20px' }}>
+					<Image src={web3devs} alt='web3devs' width='200' height='200' />
+				</Box>
+				<Box sx={{ margin: '20px' }}>
+					<Image src={webtrzy} alt='webtrzy' width='300' height='50' />
+				</Box>
 			</Box>
 		</>
 	);
