@@ -56,7 +56,7 @@ export default function TeamMateCard({
 				<Avatar
 					alt={name}
 					src={thumbnail}
-					sx={{ width: '80px', height: '80px' }}
+					sx={{ width: '80px', height: '80px'}}
 				/>
 				<Typography m={5}>
 					<Box

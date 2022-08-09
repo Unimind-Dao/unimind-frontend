@@ -13,7 +13,7 @@ export default function PartnersBox() {
     width: "100%",
     display: "flex",
     flexDirection: "row",
-    justifyContent: matches ? "center" : "flex-start",
+    justifyContent: "center",
     alignItems: "center",
     color: "grey",
   };

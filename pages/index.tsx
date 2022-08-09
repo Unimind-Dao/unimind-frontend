@@ -6,6 +6,7 @@ import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import JoinUnimindSection from "../components/JoinUnimindSection/JoinUnimindSection";
 import { OurMission } from "../components/OurMission";
+import Partners from '../components/Partners/Partners'
 import Team from "../components/Team/Team";
 import { WhatDrivesUs } from "../components/WhatDrivesUs";
 import { sectionName } from "../data/constants";
@@ -31,6 +32,9 @@ function App() {
       </section>
       <section id={sectionName.team}>
         <Team />
+      </section>
+      <section>
+        <Partners />
       </section>
       <Footer />
     </>
