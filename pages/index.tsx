@@ -26,10 +26,10 @@ function App() {
       <SectionWithPadding id={sectionName.team}>
         <Team />
       </SectionWithPadding>
-      <StyledDivider />
       <section>
         <Partners />
       </section>
+      <StyledDivider />
       <Footer />
     </>
   );
