@@ -15,15 +15,26 @@ const Authors = () => {
 
 	return (
 		<>
-			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+			<Box
+				sx={{
+					display: 'flex',
+					flexDirection: 'row',
+					alignItems: 'center',
+				}}
+			>
 				<Typography variant='h3' sx={{ marginRight: '30px' }}>
 					Authors
 				</Typography>
-				{data?.map(
-					(mate: {
-						name: string;
-						thumbnail: string ;
-					}) => {
+				<Box
+					sx={{
+						display: 'flex',
+						flexDirection: 'row',
+						alignItems: 'center',
+						position: 'relative',
+						overflow: 'hidden',
+					}}
+				>
+					{data?.map((mate: { name: string; thumbnail: string }) => {
 						return (
 							<TeammateButton
 								key={mate.name}
@@ -31,8 +42,8 @@ const Authors = () => {
 								thumbnail={mate.thumbnail}
 							/>
 						);
-					}
-				)}
+					})}
+				</Box>
 			</Box>
 		</>
 	);

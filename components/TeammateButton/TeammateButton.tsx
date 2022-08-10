@@ -13,6 +13,7 @@ const TeammateButton = ({
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'center',
+		backgroundColor: 'grey'
 	};
 
 	return (

@@ -27,7 +27,7 @@ const ArticlesPlace = () => {
 
 	return (
 		<>
-			<Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width:'100%'}}>
 				{data?.map((article: IDataArticles) => {
 					return (
 						<ArticleCard
