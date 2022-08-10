@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import { Box, useMediaQuery } from '@mui/material';
+import theme from 'theme/theme';
 
 import ArticlesPlace from '../ArticlesPlace/ArticlesPlace';
 import Authors from '../Authors';
@@ -7,7 +8,9 @@ import PopularTags from '../PopularTags/PopularTags';
 
 import BlogTitle from './BlogTitle';
 
-const BlogHeader = () => {
+const Blog = () => {
+	const matches = useMediaQuery(theme.breakpoints.down('md'));
+
 	const sx = {
 		width: '100%',
 		height: 'auto',
@@ -17,16 +20,25 @@ const BlogHeader = () => {
 
 	return (
 		<>
-			<Box sx={{ width: '1700px', margin: 'auto' }}>
+			<Box
+				sx={{
+					width: matches ? '100%' : '1700px',
+					margin: 'auto',
+				}}
+			>
 				<Box sx={sx}>
 					<BlogTitle />
 				</Box>
-				<PopularTags />
-				<Authors />
+				{matches === true ? null : (
+					<>
+						<PopularTags />
+						<Authors />
+					</>
+				)}
 				<ArticlesPlace />
 			</Box>
 		</>
 	);
 };
 
-export default BlogHeader;
+export default Blog;

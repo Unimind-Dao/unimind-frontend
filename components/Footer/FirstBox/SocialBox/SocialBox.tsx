@@ -12,8 +12,7 @@ const SocialBox = () => {
 			sx={{
 				display: 'flex',
 				flexDirection: ' row',
-				// justifyContent: matches ? 'flex-start' : 'center',
-        justifyContent: 'flex-end',
+        		justifyContent: 'flex-end',
 				alignItems: 'center',
 				color: 'white',
 				marginRight: matches ? '0' : '100px',

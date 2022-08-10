@@ -22,10 +22,10 @@ const TeammateButton = ({
 				<Avatar
 					alt={name}
 					src={thumbnail}
-					sx={{ width: '30px', height: '30px' }}
+					sx={{ width: '30px', height: '30px' , marginRight:'10px'}}
 					color='grey'
 				/>
-				<Typography>{name} "(12 arcticles)"</Typography>
+				<Typography>{name} (12 arcticles)</Typography>
 			</Button>
 		</>
 	);

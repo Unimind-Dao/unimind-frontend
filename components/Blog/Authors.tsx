@@ -20,6 +20,7 @@ const Authors = () => {
 					display: 'flex',
 					flexDirection: 'row',
 					alignItems: 'center',
+					marginTop:'20px'
 				}}
 			>
 				<Typography variant='h3' sx={{ marginRight: '30px' }}>
@@ -34,7 +35,7 @@ const Authors = () => {
 						overflow: 'hidden',
 					}}
 				>
-					{data?.map((mate: { name: string; thumbnail: string }) => {
+					{/* {data?.map((mate: { name: string; thumbnail: string }) => {
 						return (
 							<TeammateButton
 								key={mate.name}
@@ -42,7 +43,23 @@ const Authors = () => {
 								thumbnail={mate.thumbnail}
 							/>
 						);
-					})}
+					})} */}
+
+					<TeammateButton
+						key={'Jan Kowalski'}
+						name={'Jan Kowalski'}
+						thumbnail={'red'}
+					/>
+					<TeammateButton
+						key={'Jan Kowalski'}
+						name={'Jan Kowalski'}
+						thumbnail={'red'}
+					/>
+					<TeammateButton
+						key={'Jan Kowalski'}
+						name={'Jan Kowalski'}
+						thumbnail={'red'}
+					/>
 				</Box>
 			</Box>
 		</>

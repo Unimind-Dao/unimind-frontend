@@ -1,22 +1,23 @@
 import React from 'react';
 import { ThemeProvider } from '@mui/system';
-import BlogHeader from '../components/Blog/BlogHeader/BlogHeader';
+
+import Blog from '../components/Blog/BlogHeader/Blog';
 import Footer from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
 import theme from '../theme/theme';
 
-const Blog = () => {
+const BlogPage = () => {
 	return (
 		<>
 			<ThemeProvider theme={theme}>
 				<Header />
 
-				<BlogHeader />
-
+				<Blog/>
 				<Footer />
 			</ThemeProvider>
+
 		</>
 	);
 };
 
-export default Blog;
+export default BlogPage;
