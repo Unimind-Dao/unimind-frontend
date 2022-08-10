@@ -1,10 +1,10 @@
-import { ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import {
   darkTheme,
   getDefaultWallets,
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
-import { ChainId,ThirdwebProvider } from "@thirdweb-dev/react";
+import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 import { appWithTranslation } from "next-i18next";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
@@ -42,6 +42,7 @@ function UnimindDao({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <ThirdwebProvider desiredChainId={chainId}>
+        <CssBaseline />
         <WagmiConfig client={wagmiClient}>
           <RainbowKitProvider
             chains={chains}

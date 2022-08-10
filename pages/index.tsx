@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@mui/system";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { About } from "../components/About";
@@ -6,20 +5,23 @@ import Footer from "../components/Footer/Footer";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import JoinUnimindSection from "../components/JoinUnimindSection/JoinUnimindSection";
-import { OurMission } from "../components/OurMission/OurMission";
+import { OurMission } from "../components/OurMission";
+import Partners from '../components/Partners/Partners'
 import Team from "../components/Team/Team";
-import { WhatDrivesUs } from "../components/WhatDrivesUs/WhatDrivesUs";
-import theme from "../theme/theme";
+import { WhatDrivesUs } from "../components/WhatDrivesUs";
+import { sectionName } from "../data/constants";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <>
+      <Header />
       <section>
-        <Header />
         <Hero />
+      </section>
+      <section id={sectionName.about}>
         <About />
       </section>
-      <section>
+      <section id={sectionName.benefits}>
         <OurMission />
       </section>
       <section>
@@ -28,11 +30,14 @@ function App() {
       <section>
         <JoinUnimindSection />
       </section>
-      <section>
+      <section id={sectionName.team}>
         <Team />
-        <Footer />
       </section>
-    </ThemeProvider>
+      <section>
+        <Partners />
+      </section>
+      <Footer />
+    </>
   );
 }
 

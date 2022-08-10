@@ -13,6 +13,7 @@ type IData = {
   discord: string;
   twitter: string;
   linkedin: string;
+  nick: string;
 };
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);
@@ -26,7 +27,7 @@ const TeamCards = () => {
   const sx = {
     display: "flex",
     flexWrap: "wrap",
-    heigth: "auto",
+    height: "auto",
     margin: "auto",
     alignItems: "center",
     justifyContent: "center",
@@ -47,6 +48,7 @@ const TeamCards = () => {
               discord={users.discord}
               twitter={users.twitter}
               linkedin={users.linkedin}
+              nick={users.nick}
             />
           );
         })}

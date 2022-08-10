@@ -1,4 +1,6 @@
-import { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from "react";
+
+import { CustomLink } from "../CustomLink";
 
 import {
   StyledCustomLink,
@@ -9,16 +11,23 @@ import {
 export const Button = ({
   variant = "light",
   children,
+  href = "",
 }: PropsWithChildren<{
   variant?: "light" | "dark";
+  href?: string;
 }>) => {
-  return (
-    <StyledCustomLink href="https://discord.gg/uKS4vjG8" target="_blank">
-      {variant === "light" ? (
-        <StyledLightButton>{children}</StyledLightButton>
-      ) : (
-        <StyledDarkButton>{children}</StyledDarkButton>
-      )}
-    </StyledCustomLink>
+  const internalButton =
+    variant === "light" ? (
+      <StyledLightButton>{children}</StyledLightButton>
+    ) : (
+      <StyledDarkButton>{children}</StyledDarkButton>
+    );
+
+  return href ? (
+    <CustomLink href={href} target="_blank">
+      {internalButton}
+    </CustomLink>
+  ) : (
+    internalButton
   );
 };
