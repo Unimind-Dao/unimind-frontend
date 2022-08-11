@@ -1,27 +1,22 @@
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Box from '@mui/system/Box';
+import Box from "@mui/system/Box";
 
-import theme from '../../../../theme/theme';
-import { SocialLinks } from '../../../SocialLinks/SocialLinks';
+import { SocialLinks } from "../../../SocialLinks";
 
 const SocialBox = () => {
-	const matches = useMediaQuery(theme.breakpoints.down('md'));
-
-	return (
-		<Box
-			sx={{
-				display: 'flex',
-				flexDirection: ' row',
-				// justifyContent: matches ? 'flex-start' : 'center',
-        justifyContent: 'flex-end',
-				alignItems: 'center',
-				color: 'white',
-				marginRight: matches ? '0' : '100px',
-			}}
-		>
-			<SocialLinks />
-		</Box>
-	);
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: " row",
+        justifyContent: "center",
+        alignItems: "center",
+        color: "white",
+        marginTop: "1rem"
+      }}
+    >
+      <SocialLinks />
+    </Box>
+  );
 };
 
 export default SocialBox;
