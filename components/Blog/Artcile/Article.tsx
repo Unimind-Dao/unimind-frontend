@@ -1,0 +1,57 @@
+
+import { Key } from "react";
+import { Box } from "@mui/material";
+import axios from "axios";
+import useSWR from "swr";
+
+import { ArticleDetails } from './ArticleDetails';
+
+
+
+interface IDataArticles {
+	key: number;
+	id: number;
+	title: string;
+	slug: string;
+	category: string;
+	thumbnail: string;
+	excerpt: string;
+	month: string;
+	day: string;
+	content: string;
+}
+
+
+const fetcher = (url: string) => axios.get(url).then((res) => res.data);
+
+ const Article = () => {
+	const { data, error } = useSWR(
+		'https://www.unimind.website/api/blog/',
+		fetcher
+	);
+
+    return (
+			<>
+			<Box>
+				{data?.map((article: IDataArticles) => {
+					return (
+						<ArticleDetails
+							key={article.id}
+							id={article.id}
+							title={article.title}
+							excerpt={article.excerpt}
+							month={article.month}
+							day={article.day}
+							content={article.content}
+							slug={article.slug}
+							category={article.category}
+							thumbnail={article.thumbnail}
+						/>
+					);
+				})}
+			</Box>
+			</>
+		);
+}
+
+export default Article;

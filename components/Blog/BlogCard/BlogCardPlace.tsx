@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import axios from 'axios';
 import useSWR from 'swr';
 
-import ArticleCard from './ArticleCard';
+import BlogCard from './BlogCard';
 
 interface IDataArticles {
 	key: number;
@@ -30,7 +30,7 @@ const ArticlesPlace = () => {
 			<Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width:'100%'}}>
 				{data?.map((article: IDataArticles) => {
 					return (
-						<ArticleCard
+						<BlogCard
 							key={article.id}
 							id={article.id}
 							title={article.title}

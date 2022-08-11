@@ -7,6 +7,10 @@ import {
 	CardMedia,
 	Typography,
 } from '@mui/material';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+
 
 interface IDataArticles {
 	key: number;
@@ -21,7 +25,7 @@ interface IDataArticles {
 	content: string;
 }
 
-const ArticleCard: FC<IDataArticles> = ({
+const BlogCard: FC<IDataArticles> = ({
 	key,
 	id,
 	title,
@@ -33,13 +37,14 @@ const ArticleCard: FC<IDataArticles> = ({
 	category,
 	thumbnail,
 }) => {
+	const router = useRouter();
 	return (
-		<>
+		<> <Link href={`posts/${id}`}>
 			<Card
 				id={id}
 				sx={{ maxWidth: '370px ', maxHeight: '434px', margin: '20px' }}
 			>
-				<CardActionArea>
+				<CardActionArea onClick={() => router.push(`posts/${id}`)}>
 					<CardMedia
 						component='img'
 						height='242'
@@ -83,8 +88,9 @@ const ArticleCard: FC<IDataArticles> = ({
 					</CardContent>
 				</CardActionArea>
 			</Card>
+			</Link>
 		</>
 	);
 };
 
-export default ArticleCard;
+export default BlogCard;

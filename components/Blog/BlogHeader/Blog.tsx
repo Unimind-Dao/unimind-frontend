@@ -2,8 +2,8 @@ import React from 'react';
 import { Box, useMediaQuery } from '@mui/material';
 import theme from 'theme/theme';
 
-import ArticlesPlace from '../ArticlesPlace/ArticlesPlace';
 import Authors from '../Authors';
+import ArticlesPlace from '../BlogCard/BlogCardPlace';
 import PopularTags from '../PopularTags/PopularTags';
 
 import BlogTitle from './BlogTitle';
