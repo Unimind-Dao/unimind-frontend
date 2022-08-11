@@ -23,9 +23,9 @@ function App() {
       <section>
         <JoinUnimindSection />
       </section>
-      <SectionWithPadding id={sectionName.team}>
+      <section id={sectionName.team}>
         <Team />
-      </SectionWithPadding>
+      </section>
       <section>
         <Partners />
       </section>

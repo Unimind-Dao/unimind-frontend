@@ -24,8 +24,8 @@ export function Team() {
 
   return (
     <>
-      <Box sx={sx}>
-        <SectionTitle sx={{ marginTop: "40px" }} mb={2}>
+      <Box sx={sx} pt={12} pb={12}>
+        <SectionTitle mb={2}>
           {t("title")}
         </SectionTitle>
         <LinearGradient shade={"light"} />
