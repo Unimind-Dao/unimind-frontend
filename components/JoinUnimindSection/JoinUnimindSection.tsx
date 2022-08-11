@@ -6,7 +6,7 @@ import { Button } from "../Button";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";
 
-const JoinUnimindSection = () => {
+export const JoinUnimindSection = () => {
   const theme = useTheme();
   const { t } = useTranslation(["join-unimind", "common"]);
 
@@ -43,5 +43,3 @@ const JoinUnimindSection = () => {
     </Content>
   );
 };
-
-export default JoinUnimindSection;

@@ -19,7 +19,7 @@ const sx = {
   alignItems: "center",
 };
 
-export default function Team() {
+export function Team() {
   const { t } = useTranslation("meet-us");
 
   return (
