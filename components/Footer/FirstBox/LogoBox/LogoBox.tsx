@@ -8,7 +8,7 @@ import LogoSvg from "../../../svg/Logo";
 
 export default function LogoBox() {
   const { t } = useTranslation("common");
-  const matches = useMediaQuery(theme.breakpoints.down('md'));
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <>

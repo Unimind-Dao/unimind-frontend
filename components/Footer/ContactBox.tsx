@@ -7,7 +7,7 @@ import { CustomLink } from "../CustomLink";
 const social = [
   { name: "contact", link: "https://unimind-dao.com/" },
   { name: "webtrzy", link: "https://webtrzy.xyz/" },
-  {name:'Scio ', link: 'https://scio.xyz/'}
+  { name: "Scio ", link: "https://scio.xyz/" },
 ];
 
 const ContactBox = () => {

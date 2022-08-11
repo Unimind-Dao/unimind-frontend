@@ -7,4 +7,4 @@ export const BackdropFilterBackground = styled.div`
       background: #000000a1;
     }
   }
-`
+`;

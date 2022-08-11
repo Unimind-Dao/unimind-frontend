@@ -7,7 +7,7 @@ import theme from "../../theme/theme";
 import ContactBox from "./ContactBox";
 
 export default function PartnersBox() {
-  const matches = useMediaQuery(theme.breakpoints.down('md'));
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
 
   const sx = {
     width: "100%",
