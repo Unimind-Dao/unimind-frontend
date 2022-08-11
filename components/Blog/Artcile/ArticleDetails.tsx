@@ -92,7 +92,7 @@ const ArticleDetails: FC<IDataArticles> = () => {
           overflow: "hidden",
         }}
       >
-        <Image layout="fill" src={img} />
+        <Image layout="fill" src={img} alt='super/>
       </Box>
       <Box sx={{ marginTop: matches ? "10px" : "30px" }}>
         <Typography>
