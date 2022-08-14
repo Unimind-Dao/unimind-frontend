@@ -1,7 +1,8 @@
 import { Grid, useTheme } from "@mui/material";
 import { useTranslation } from "next-i18next";
 
-import { Content } from "../../layout/Content";
+import { Content } from "@/layout/Content";
+
 import about from "../../public/locales/en/about.json";
 
 import { SingleCard } from "./SingleCard";

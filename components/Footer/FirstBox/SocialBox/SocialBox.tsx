@@ -1,6 +1,6 @@
 import Box from "@mui/system/Box";
 
-import { SocialLinks } from "../../../SocialLinks";
+import { SocialLinks } from "@/components/SocialLinks";
 
 const SocialBox = () => {
   return (
@@ -11,7 +11,7 @@ const SocialBox = () => {
         justifyContent: "center",
         alignItems: "center",
         color: "white",
-        marginTop: "1rem"
+        marginTop: "1rem",
       }}
     >
       <SocialLinks />

@@ -1,8 +1,5 @@
 import React from "react";
 import { Box } from "@mui/material";
-import useMediaQuery from "@mui/material/useMediaQuery";
-
-import theme from "../../theme/theme";
 
 import ContactBox from "./ContactBox";
 

@@ -2,7 +2,6 @@ import React from "react";
 import { Toolbar } from "@mui/material";
 import { useTranslation } from "next-i18next";
 
-import { sectionLink, sectionName } from "../../data/constants";
 import { CustomLink } from "../CustomLink";
 import ConnectWallet from "../Wallet/Connect";
 
@@ -17,7 +16,6 @@ const sx = {
   color: "white",
   lineHeight: "24px",
   position: "fixed",
-  
 };
 
 export const DesktopNavBar = () => {
@@ -25,7 +23,10 @@ export const DesktopNavBar = () => {
 
   return (
     <>
-      <Toolbar sx={{ display: "flex", alignItems: "center", zIndex: "1",}} component="nav">
+      <Toolbar
+        sx={{ display: "flex", alignItems: "center", zIndex: "1" }}
+        component="nav"
+      >
         <CustomLink sx={sx}>{t("about")}</CustomLink>
         <CustomLink sx={sx}>{t("benefits")}</CustomLink>
         <CustomLink sx={sx}>{t("team")}</CustomLink>
