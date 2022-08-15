@@ -19,7 +19,6 @@ export default function LogoBox() {
           justifyContent: "flex-start",
           alignItems: "center",
           color: "white",
-          ml: matches ? "0" : "5%",
         }}
       >
         <Box

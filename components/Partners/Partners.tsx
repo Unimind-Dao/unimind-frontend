@@ -1,6 +1,4 @@
-import React from 'react';
 import { Box } from "@mui/material";
-import { useTranslation } from 'next-i18next';
 
 import { LinearGradient } from '../LinearGradient';
 import { SectionTitle } from '../SectionTitle';
@@ -18,9 +16,7 @@ const sx = {
 	alignItems: 'center',
 };
 
-export default function Partners() {
-
-
+export function Partners() {
 	return (
 		<>
 			<Box sx={sx}>
