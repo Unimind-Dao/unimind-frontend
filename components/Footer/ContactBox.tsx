@@ -18,7 +18,7 @@ const ContactBox = () => {
     <>
       {social.map(({ name, link }) => {
         return (
-          <Box key={Id} sx={{ margin: "20px" }} id={`${Id}-${name}`}>
+          <Box key={name} sx={{ margin: "20px" }} id={`${Id}-${name}`}>
             <CustomLink href={link} underline="none" sx={{ color: "white" }}>
               {t(name)}
             </CustomLink>
