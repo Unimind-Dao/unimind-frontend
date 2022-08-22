@@ -2,7 +2,8 @@ import { Grid } from "@mui/material";
 import { useTheme } from "@mui/system";
 import { useTranslation } from "next-i18next";
 
-import { Content } from "../../layout/Content";
+import { Content } from "@/layout/Content";
+
 import { DrivingSection } from "../DrivingSection/DrivingSection";
 import { LinearGradient } from "../LinearGradient";
 import { SectionTitle } from "../SectionTitle";

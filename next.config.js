@@ -24,6 +24,16 @@ module.exports = {
       // Not supported yet.
       pure: true,
     },
+    eslint: [
+      "components",
+      "contracts",
+      "data",
+      "hooks",
+      "layout",
+      "pages",
+      "theme",
+      "utils",
+    ],
   },
   i18n,
 };

@@ -19,10 +19,27 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@components": ["components/*"],
-      "@layout": ["layout/*"]
+      "@": ["."],
+      "@/assets/*": ["assets/*"],
+      "@/components/*": ["components/*"],
+      "@/contracts/*": ["contracts/*"],
+      "@/data/*": ["data/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/layout/*": ["layout/*"],
+      "@/pages/*": ["pages/*"],
+      "@/public/*": ["public/*"],
+      "@/theme/*": ["theme/*"],
+      "@/styles/*": ["styles/*"],
+      "@/utils/*": ["utils/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": [
+    "global.d.ts",
+    "next-env.d.ts",
+    "react-i18next.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js"
+  ],
   "exclude": ["node_modules"]
 }

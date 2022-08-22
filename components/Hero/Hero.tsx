@@ -2,8 +2,9 @@ import React from "react";
 import { Grid, Typography, useTheme } from "@mui/material";
 import { useTranslation } from "next-i18next";
 
-import { useBreakpoints } from "../../hooks";
-import { Content } from "../../layout";
+import { useBreakpoints } from "@/hooks/useBreakpoints";
+import { Content } from "@/layout/Content";
+
 import { Button } from "../Button";
 import { SocialLinks } from "../SocialLinks";
 
