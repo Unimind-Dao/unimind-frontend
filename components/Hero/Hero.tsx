@@ -37,7 +37,10 @@ export const Hero = () => {
           {t("description")}
         </Typography>
         <Grid item width={{ sm: 205 }}>
-          <Button href={process.env.NEXT_PUBLIC_DISCORD_INVITE_LINK}>
+          <Button
+            aria-label="discord invite link button"
+            href={process.env.NEXT_PUBLIC_DISCORD_INVITE_LINK}
+          >
             {t("common:joinCommunity")}
           </Button>
         </Grid>

@@ -6,7 +6,7 @@ export const Logo = () => {
   const handlePageRefresh = () => window.location.reload();
 
   return (
-    <Button onClick={handlePageRefresh}>
+    <Button aria-label="unimind logo icon" onClick={handlePageRefresh}>
       <LogoSvg />
     </Button>
   );
