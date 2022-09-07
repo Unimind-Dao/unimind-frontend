@@ -20,10 +20,6 @@ import createEmotionCache from "../utils/createEmotionCache";
 
 import "@rainbow-me/rainbowkit/styles.css";
 import "../index.css";
-import "../styles/fonts.css";
-import "@rainbow-me/rainbowkit/styles.css";
-import "../index.css";
-import "../styles/fonts.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
