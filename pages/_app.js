@@ -1,3 +1,4 @@
+import { CacheProvider, EmotionCache } from "@emotion/react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import {
   darkTheme,
@@ -5,6 +6,7 @@ import {
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+import { AppProps } from "next/app";
 import Head from "next/head";
 import { appWithTranslation } from "next-i18next";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
@@ -14,6 +16,7 @@ import { publicProvider } from "wagmi/providers/public";
 import { MetaTags } from "../components/MetaTags";
 import Toaster from "../components/Toaster/Toaster";
 import theme from "../theme/theme";
+import createEmotionCache from "../utils/createEmotionCache";
 
 import "@rainbow-me/rainbowkit/styles.css";
 import "../index.css";
@@ -21,6 +24,9 @@ import "../styles/fonts.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import "../index.css";
 import "../styles/fonts.css";
+
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache();
 
 const { chains, provider } = configureChains(
   [chain.rinkeby],
@@ -40,33 +46,39 @@ const wagmiClient = createClient({
 
 const chainId = ChainId.Rinkeby;
 
-function UnimindDao({ Component, pageProps }) {
+function UnimindDao({
+  Component,
+  pageProps,
+  emotionCache = clientSideEmotionCache,
+}) {
   return (
-    <ThemeProvider theme={theme}>
-      <ThirdwebProvider desiredChainId={chainId}>
-        <CssBaseline />
-        <WagmiConfig client={wagmiClient}>
-          <RainbowKitProvider
-            chains={chains}
-            theme={darkTheme({
-              accentColor: theme.palette.primary.main,
-              accentColorForeground: "black",
-              borderRadius: "small",
-              fontStack: "system",
-            })}
-          >
-            <>
-              <Head>
-                <title>unimind.dao</title>
-                <MetaTags />
-              </Head>
-              <Component {...pageProps} />
-              <Toaster />
-            </>
-          </RainbowKitProvider>
-        </WagmiConfig>
-      </ThirdwebProvider>
-    </ThemeProvider>
+    <CacheProvider value={emotionCache}>
+      <ThemeProvider theme={theme}>
+        <ThirdwebProvider desiredChainId={chainId}>
+          <CssBaseline />
+          <WagmiConfig client={wagmiClient}>
+            <RainbowKitProvider
+              chains={chains}
+              theme={darkTheme({
+                accentColor: theme.palette.primary.main,
+                accentColorForeground: "black",
+                borderRadius: "small",
+                fontStack: "system",
+              })}
+            >
+              <>
+                <Head>
+                  <title>unimind.dao</title>
+                  <MetaTags />
+                </Head>
+                <Component {...pageProps} />
+                <Toaster />
+              </>
+            </RainbowKitProvider>
+          </WagmiConfig>
+        </ThirdwebProvider>
+      </ThemeProvider>
+    </CacheProvider>
   );
 }
 

@@ -18,25 +18,25 @@ type IData = {
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
+const sx = {
+  display: "flex",
+  flexWrap: "wrap",
+  height: "auto",
+  margin: "auto",
+  alignItems: "center",
+  justifyContent: "center",
+};
+
 const TeamCards = () => {
-  const { data, error } = useSWR(
+  const { data } = useSWR<IData[]>(
     "https://www.unimind.website/api/blog/team",
     fetcher
   );
 
-  const sx = {
-    display: "flex",
-    flexWrap: "wrap",
-    height: "auto",
-    margin: "auto",
-    alignItems: "center",
-    justifyContent: "center",
-  };
-
   return (
     <>
       <Box sx={sx}>
-        {data?.map((users: IData) => {
+        {data?.map((users) => {
           return (
             <TeammateCard
               id={users.id}

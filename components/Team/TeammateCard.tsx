@@ -2,6 +2,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Avatar, Box, Card, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
+import Image from "next/image";
 
 import { CustomLink } from "@/components/CustomLink";
 
@@ -54,12 +55,16 @@ export default function TeamMateCard({
   return (
     <>
       <Card sx={sx} key={id} id={id}>
-        <Avatar
-          alt={name}
-          src={thumbnail}
-          sx={{ width: "80px", height: "80px" }}
-        />
-        <Typography m={5}>
+        <Avatar sx={{ width: "80px", height: "80px" }}>
+          <Image
+            width="80px"
+            height="80px"
+            loading="lazy"
+            alt={name}
+            src={thumbnail}
+          />
+        </Avatar>
+        <Box m={5}>
           <Box
             sx={{
               display: "flex",
@@ -72,7 +77,7 @@ export default function TeamMateCard({
             <Box sx={{ color: "white" }}>{nick}</Box>
             <Box sx={{ color: "gray" }}>{role}</Box>
           </Box>
-        </Typography>
+        </Box>
         <Box sx={socialLinks}>
           <CustomLink
             aria-label="twitter icon link"

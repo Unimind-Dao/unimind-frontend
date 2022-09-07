@@ -26,4 +26,7 @@ module.exports = {
     },
   },
   i18n,
+  images: {
+    domains: ["www.unimind.website"],
+  },
 };
