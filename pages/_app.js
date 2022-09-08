@@ -18,9 +18,6 @@ import theme from "../theme/theme";
 import "@rainbow-me/rainbowkit/styles.css";
 import "../index.css";
 import "../styles/fonts.css";
-import "@rainbow-me/rainbowkit/styles.css";
-import "../index.css";
-import "../styles/fonts.css";
 
 const { chains, provider } = configureChains(
   [chain.rinkeby],
