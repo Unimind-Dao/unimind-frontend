@@ -1,25 +1,25 @@
-import React from "react";
-import { Box, Grid, Typography, useTheme } from "@mui/material";
+import React from 'react';
+import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Image from 'next/image';
-import { useTranslation } from "next-i18next";
+import { useTranslation } from 'next-i18next';
 
-import { useBreakpoints } from "../../hooks";
-import { Content } from "../../layout";
-import { Button } from "../Button";
-import { SocialLinks } from "../SocialLinks";
+import { useBreakpoints } from '../../hooks';
+import { Content } from '../../layout';
+import { Button } from '../Button';
+import { SocialLinks } from '../SocialLinks';
 
 import shape from './Shapes3.png';
 
 export const Hero = () => {
-  const { t } = useTranslation(["hero", "common"]);
-  const { isMobile } = useBreakpoints();
-  const theme = useTheme();
+	const { t } = useTranslation(['hero', 'common']);
+	const { isMobile } = useBreakpoints();
+	const theme = useTheme();
+	const matches = useMediaQuery(theme.breakpoints.down('md'));
+	const width = isMobile ? 'auto' : '50%';
 
-  const width = isMobile ? "auto" : "50%";
-
-  return (
+	return (
 		<Grid sx={{ backgroundColor: theme.palette.common.black }} flexWrap='wrap'>
-			<Box sx ={{display: 'flex', flexDirection:'row'}}>
+			<Box sx={{ display: 'flex', flexDirection: 'row' }}>
 				<Content sx={{ width }}>
 					<Typography
 						variant='h1'
@@ -47,10 +47,18 @@ export const Hero = () => {
 					</Grid>
 					<SocialLinks pt={7} justifyContent={{ xs: 'center', sm: 'start' }} />
 				</Content>
-        <Box sx={{marginTop:'100px', display: 'flex', justifyContent:"flex-end", width:'40%'}}>
-				<Image src={shape} width='550px' height='600px' layout='fixed' />
-				
-        </Box>
+				{matches ? 
+					null : <Box
+						sx={{
+							marginTop: '100px',
+							display: 'flex',
+							justifyContent: 'flex-end',
+							width: '40%',
+						}}
+					>
+						<Image src={shape} width='550px' height='600px' layout='fixed' />
+					</Box>
+				 }
 			</Box>
 		</Grid>
 	);
