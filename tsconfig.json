@@ -19,8 +19,8 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@components": ["components/*"],
-      "@layout": ["layout/*"]
+      "@/components/*": ["components/*"],
+      "@/layout/*": ["layout/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

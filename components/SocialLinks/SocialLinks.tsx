@@ -10,7 +10,11 @@ export const SocialLinks = (props: GridProps) => {
     <Grid container columnSpacing={4} {...props}>
       {data.map(({ id, href, icon }) => (
         <Grid item key={id}>
-          <CustomLink href={href} target="_blank">
+          <CustomLink
+            aria-label={`${id} icon button link`}
+            href={href}
+            target="_blank"
+          >
             {icon}
           </CustomLink>
         </Grid>

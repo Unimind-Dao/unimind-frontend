@@ -5,11 +5,13 @@ import {
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+import Head from "next/head";
 import { appWithTranslation } from "next-i18next";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
+import { MetaTags } from "../components/MetaTags";
 import Toaster from "../components/Toaster/Toaster";
 import theme from "../theme/theme";
 
@@ -53,8 +55,14 @@ function UnimindDao({ Component, pageProps }) {
               fontStack: "system",
             })}
           >
-            <Component {...pageProps} />
-            <Toaster />
+            <>
+              <Head>
+                <title>unimind.dao</title>
+                <MetaTags />
+              </Head>
+              <Component {...pageProps} />
+              <Toaster />
+            </>
           </RainbowKitProvider>
         </WagmiConfig>
       </ThirdwebProvider>
