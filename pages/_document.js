@@ -4,13 +4,41 @@ import { Head, Html, Main, NextScript } from "next/document";
 import i18nextConfig from "../next-i18next.config";
 import createEmotionCache from "../utils/createEmotionCache";
 
+const fontPaths = [
+  "/fonts/SpaceGrotesk-Regular.woff",
+  "/fonts/SpaceGrotesk-Medium.woff2",
+  "/fonts/SpaceGrotesk-Medium.woff",
+  "/fonts/Poppins-Regular.woff",
+  "/fonts/Poppins-Medium.woff",
+];
+
+const getFontFormat = (path = "") =>
+  `font/${path.slice(path.indexOf(".") + 1)}`;
+
+const FontLink = () => (
+  <>
+    {fontPaths.map((path) => (
+      <link
+        key={path}
+        href={path}
+        type={getFontFormat(path)}
+        rel="preload"
+        as="font"
+        crossOrigin="anonymous"
+      />
+    ))}
+  </>
+);
+
 export default function Document(props) {
   const currentLocals =
     props.__NEXT_DATA__.locale || i18nextConfig.i18n.defaultLocale;
 
   return (
     <Html lang={currentLocals}>
-      <Head />
+      <Head>
+        <FontLink />
+      </Head>
       <body>
         <Main />
         <NextScript />
