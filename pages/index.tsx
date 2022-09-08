@@ -1,5 +1,5 @@
 import { styled } from "@mui/material";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import {
@@ -71,20 +71,12 @@ const StyledDivider = styled("div")`
   width: 100%;
 `;
 
-export const getServerSideProps: GetServerSideProps = async ({
-  req,
-  res,
-  locale = "",
-}) => {
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
-  );
-
+export const getStaticProps: GetStaticProps = async ({ locale = "" }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale)),
     },
+    revalidate: 3600,
   };
 };
 
