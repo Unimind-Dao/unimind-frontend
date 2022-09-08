@@ -9,6 +9,7 @@ export default function Document(props) {
   return (
     <Html lang={currentLocals}>
       <Head>
+        <link rel="preconnect" href="https://www.unimind.website" />
         <link
           href="/fonts/SpaceGrotesk-Medium.woff2"
           as="font"

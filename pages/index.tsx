@@ -1,7 +1,18 @@
 import { styled } from "@mui/material";
+import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import { About, Footer,Header, Hero, JoinUnimindSection, OurMission, Partners, Team,WhatDrivesUs } from "../components";
+import {
+  About,
+  Footer,
+  Header,
+  Hero,
+  JoinUnimindSection,
+  OurMission,
+  Partners,
+  Team,
+  WhatDrivesUs,
+} from "../components";
 import { sectionName } from "../data/constants";
 
 function App() {
@@ -41,17 +52,40 @@ const SectionWithPadding = styled("section")`
 `;
 
 const StyledDivider = styled("div")`
-  background-image: linear-gradient(to right, #252525, #2e2e2e, #383838, #424242, #4c4c4c, #4c4c4c, #4c4c4c, #4c4c4c, #424242, #383838, #2e2e2e, #252525);
+  background-image: linear-gradient(
+    to right,
+    #252525,
+    #2e2e2e,
+    #383838,
+    #424242,
+    #4c4c4c,
+    #4c4c4c,
+    #4c4c4c,
+    #4c4c4c,
+    #424242,
+    #383838,
+    #2e2e2e,
+    #252525
+  );
   height: 2px;
   width: 100%;
 `;
 
-export async function getStaticProps({ locale = "" }) {
+export const getServerSideProps: GetServerSideProps = async ({
+  req,
+  res,
+  locale = "",
+}) => {
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=10, stale-while-revalidate=59"
+  );
+
   return {
     props: {
       ...(await serverSideTranslations(locale)),
     },
   };
-}
+};
 
 export default App;
