@@ -1,5 +1,4 @@
 import { Head, Html, Main, NextScript } from "next/document";
-import { useRouter } from "next/router";
 
 import i18nextConfig from "../next-i18next.config";
 
@@ -9,7 +8,20 @@ export default function Document(props) {
 
   return (
     <Html lang={currentLocals}>
-      <Head />
+      <Head>
+        <link
+          href="/fonts/SpaceGrotesk-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/Poppins-Regular.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+      </Head>
       <body>
         <Main />
         <NextScript />
