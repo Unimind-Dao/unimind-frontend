@@ -29,4 +29,5 @@ module.exports = {
   images: {
     domains: ["www.unimind.website", "unimind.website"],
   },
+  swcMinify: true,
 };
