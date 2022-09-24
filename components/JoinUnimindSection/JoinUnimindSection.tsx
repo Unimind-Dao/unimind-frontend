@@ -13,7 +13,7 @@ export const JoinUnimindSection = () => {
   return (
     <Content
       pt={12}
-      pb={{ xs: 11, md: 16 }}
+      pb={12}
       sx={{ backgroundColor: theme.palette.primary.main }}
     >
       <Grid
